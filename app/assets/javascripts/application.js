@@ -11,8 +11,13 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require i18n/translations
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  console.log(I18n.t('app.alert'));
+});
