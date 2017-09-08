@@ -3,7 +3,6 @@ class CreateRequests < ActiveRecord::Migration[5.0]
     create_table :requests do |t|
       t.integer :user_id
       t.string :title
-      t.integer :category_id
       t.datetime :publish_date
       t.string :author
       t.integer :pages
