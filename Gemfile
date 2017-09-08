@@ -1,10 +1,5 @@
 source 'https://rubygems.org'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
-
 gem "rails", "~> 5.0.2"
 gem "mysql2"
 gem "puma", "~> 3.0"
@@ -24,6 +19,7 @@ gem "ransack", "1.8.2"
 gem "bootstrap-kaminari-views"
 gem "will_paginate"
 gem "font-awesome-sass"
+gem "font-awesome-rails"
 gem "cancancan"
 gem "i18n-js"
 gem "active_model_serializers"

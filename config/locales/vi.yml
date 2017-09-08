@@ -1,0 +1,9 @@
+vi:
+  app:
+    app_name: "Book Review"
+    setting: "Thiết lập"
+    signup: "Đăng kí"
+    login: "Đăng nhập"
+    logout: "Đăng xuất"
+    already_have_account: "Đã có tài khoản đăng nhập"
+    toggle_navi: "Chuyển đổi điều hướng"
