@@ -1,4 +1,16 @@
 vi:
+  common:
+    sure: "Bạn có chắc không?"
+    update: "Cập nhật"
+    need_current_pass: "chúng tôi cần mật khẩu hiện tại của bạn
+      để xác nhận thay đổi của bạn"
+    char_min: "tối thiểu ký tự"
+    edit: "Chỉnh sửa"
+    wait_infor: "Hiện đang chờ xác nhận"
+    confirm_account: "Xác nhận tài khoản"
+    hello: "Xin chào"
+    unhappy: "Không hạnh phúc"
+    back: "Quay trở về"
   app:
     app_name: "Book Review"
     setting: "Thiết lập"
@@ -7,3 +19,40 @@ vi:
     logout: "Đăng xuất"
     already_have_account: "Đã có tài khoản đăng nhập"
     toggle_navi: "Chuyển đổi điều hướng"
+    alert: "123"
+    resend_confirm: "Gửi lại hướng dẫn xác nhận"
+    welcome: "Chào mừng"
+    click_link_confirm: "Bạn có thể xác nhận email tài khoản
+      của mình thông qua liên kết dưới đây:"
+    change_pass: "Thay đổi mật khẩu của bạn"
+    forgot_pass: "Quên mật khẩu?"
+    reset_pass_instruction: "Gửi cho tôi hướng dẫn đặt lại mật khẩu"
+    new_pass: "Mật khẩu mới"
+    confirm_new_pass: "Xác nhận mật khẩu mới"
+    cancel_account: "Bỏ tài khoản của tôi"
+    login_with: "Đăng nhập với"
+  unlock:
+    unlock_1: "Gửi lại hướng dẫn mở khóa"
+    unlock_2: "Tài khoản của bạn đã bị khoá do số lượng quá nhiều
+       của những nỗ lực đăng nhập không thành công."
+    unlock_3: "Nhấp vào liên kết bên dưới để mở khóa tài khoản của bạn:"
+    unlock_4: "Mở khóa tài khoản của tôi"
+  confirm:
+    confirm_1: "Không nhận được hướng dẫn xác nhận?"
+    confirm_2: "Không nhận được hướng dẫn mở khóa?"
+  reset:
+    reset_1: "Ai đó đã yêu cầu liên kết thay đổi mật khẩu của bạn.
+       Bạn có thể thực hiện điều này thông qua liên kết bên dưới."
+    reset_2: "Thay đổi mật khẩu của tôi"
+    reset_3: "Nếu bạn không yêu cầu điều này, vui lòng bỏ qua email này."
+    reset_4: "Mật khẩu của bạn sẽ không thay đổi cho đến khi bạn
+       truy cập liên kết ở trên và tạo một liên kết mới."
+  change:
+    change_1: "Chúng tôi đang liên hệ với bạn để thông báo cho
+      bạn biết rằng email của bạn đang được thay đổi thành"
+    change_2: "Chúng tôi đang liên hệ với bạn để thông báo cho bạn
+      rằng email của bạn đã được thay đổi để"
+    change_3: "Chúng tôi đang liên hệ với bạn để thông báo cho bạn
+      rằng mật khẩu của bạn đã được thay đổi."
+    change_4: "để trống nếu
+       bạn không muốn thay đổi nó"
