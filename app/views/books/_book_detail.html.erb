@@ -12,10 +12,12 @@
         <%= book.title %>
       </div>
       <div class="book-index-author">
+        <%= t "books.author" %>:
         <%= book.author %>
       </div>
       <div class="book-index-date">
-        <%= book.publish_date %>
+        <%= t "books.publish_date" %>:
+        <%= book.publish_date.strftime I18n.t("date_format_1") %>
       </div>
       <br>
       <div class="book-index-des">

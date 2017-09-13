@@ -1,0 +1,3 @@
+$('#pagination').html('<%= j paginate(@review_list, remote: true).to_s %>');
+$('#book-show-review').html('<%= j render "book_review", book: @book,
+  review_list: @review_list %>');

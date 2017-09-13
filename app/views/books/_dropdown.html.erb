@@ -1,0 +1,20 @@
+<span class="dropdown" id="index-dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button"
+    data-toggle="dropdown">
+  <span id="book-index-dropdown-header"><%= t "book.choose" %></span>
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li>
+      <a>
+        <%= sort_link books_support.search, :publish_date,
+          t("books.publish_date"), {}, {remote: true, method: :get} %>
+      </a>
+    </li>
+    <li>
+      <a>
+        <%= sort_link books_support.search, :title, t("books.title"), {},
+          {remote: true, method: :get} %>
+      </a>
+    </li>
+  </ul>
+</span>

@@ -3,6 +3,10 @@
 @import "font-awesome";
 
 $blue: #00f;
+$alto: #dadada;
+$black: #000;
+$white: #fff;
+$gray-light: #eee;
 
 .left {
   float: left;
@@ -50,10 +54,73 @@ $blue: #00f;
 
 .book-index-title {
   color: $blue;
-  font-size: 32px;
+  font-size: 28px;
 }
 
 .book-index-cover {
   height: 265px;
   width: 207px;
+}
+
+.btn-search-book-index {
+  width: 80px;
+}
+
+.f-text.f-calendar {
+  background: url("http://www.hungrydeals.sg/bundles/insingpromotion/images/sprite_repeat.png") no-repeat right center;
+}
+
+.f-text {
+  border: 1px solid $alto;
+  border-radius: 4px;
+  color: $black;
+  display: block;
+  font-family: "hgw-HelveticaNeue", Arial, sans-serif;
+  max-width: 100%;
+}
+
+.pj-form-field {
+  background-color: $white;
+  border: solid 1px $alto;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 1px $gray-light;
+  font: normal 16px Verdana, sans-serif;
+  font-family: Verdana;
+  padding: 7px 6px;
+}
+
+.pj-form-field [type=text] {
+  height: 14px;
+  margin-top: 5px;
+  padding: 7px 6px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.book-show-cover {
+  height: 450px;
+  width: 350px;
+}
+
+.book-cover-container {
+  border: 1px solid $gray-light;
+}
+
+.book-show-info {
+  font-size: 16px;
+}
+
+.book-show-title {
+  color: $blue;
+  font-size: 32px;
+}
+
+.book-show-review {
+  text-align: left;
+}
+
+.book-show-full-info {
+  height: 500px;
 }

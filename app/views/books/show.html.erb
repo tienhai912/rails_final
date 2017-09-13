@@ -1,0 +1,39 @@
+<div class="book-show-full-info">
+  <div class="book-detail col-xs-12">
+    <div class="book-cover-container col-xs-4 col-xs-offset-1">
+      <% if @book.cover %>
+        <%= image_tag @book.cover, class: "book-show-cover" %>
+      <% end %>
+    </div>
+    <div class="book-show-info col-xs-5">
+      <div class="book-des">
+        <div class="book-show-title">
+          <%= @book.title %>
+        </div>
+        <div class="book-show-author">
+          <%= t "books.author" %>:
+          <%= link_to books_path(params[:locale], q: {author_cont: @book.author}) do %>
+            <%= @book.author %>
+          <% end %>
+        </div>
+        <div class="book-show-date">
+        <%= t "books.publish_date" %>:
+          <%= @book.publish_date.strftime I18n.t("date_format_1") %>
+        </div>
+        <br>
+        <div class="book-show-des">
+          <%= @book.description %>
+        </div>
+      </div>
+      <div class="book-action">
+        <button class="btn btn-primary book-show-btn"></button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="book-show-review col-xs-offset-1 col-xs-10">
+  <h2><%= t "books.review" %></h2>
+  <div id="book-show-review">
+    <%= render "book_review", book: @book, review_list: @review_list %>
+  </div>
+</div>
