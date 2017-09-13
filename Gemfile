@@ -30,6 +30,7 @@ gem "omniauth"
 gem "omniauth-google-oauth2"
 gem "omniauth-facebook"
 gem "figaro"
+gem "simplecov-rcov"
 
 group :development, :test do
   gem "byebug", platform: :mri
