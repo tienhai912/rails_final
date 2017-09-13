@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
-    :recoverable, :rememberable, :trackable, :validatable
+    :recoverable, :rememberable, :trackable, :validatable,
+    :omniauthable, omniauth_providers: %i(facebook google_oauth2).freeze
 
   has_one :profile, dependent: :destroy
   has_many :bookmarks, dependent: :destroy
@@ -21,4 +22,15 @@ class User < ApplicationRecord
     foreign_key: :user_id, dependent: :destroy
   has_many :checked_requests, class_name: Request.name,
     foreign_key: :admin_id, dependent: :destroy
+
+  class << self
+    def from_omniauth auth
+      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+        auth_info = auth.info
+        user.email = auth_info.email
+        user.password = Devise.friendly_token[0, 20]
+        user.name = auth_info.name
+      end
+    end
+  end
 end
