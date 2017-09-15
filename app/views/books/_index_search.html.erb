@@ -1,0 +1,38 @@
+<div class="text-left" id="book-search">
+  <div>
+    <%= t "books.sort_by" %>
+    <span class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button"
+        data-toggle="dropdown">
+      <span id="book-index-dropdown-header"><%= t "books.choose" %></span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li>
+          <a>
+            <%= sort_link books_support.search, :publish_date,
+              t("books.publish_date"), {}, {remote: true, method: :get} %>
+          </a>
+        </li>
+        <li>
+          <a>
+            <%= sort_link books_support.search, :title, t("books.title"), {},
+              {remote: true, method: :get} %>
+          </a>
+        </li>
+      </ul>
+    </span>
+  </div>
+  <br>
+  <div>
+    <%= t "books.showing" %>
+    <% if result.count == 0 %>
+      <%= t("books.zero") %>
+    <% elsif result.count == 1 %>
+      <%= t("books.one") %>
+    <% else %>
+      <%= result.offset_value + 1 %> - <%= result.offset_value + result.length %>
+      <%= t "books.of" %>
+      <%= result.count %> <%= t("books.result") %>
+    <% end %>
+  </div>
+</div>

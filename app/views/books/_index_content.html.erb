@@ -1,0 +1,12 @@
+<div id="book-content">
+  <% if books_support.books_search.any? %>
+    <% books_support.books_search.each do |book| %>
+      <%= render "book_detail", book: book %>
+    <% end %>
+  <% else %>
+    <center><%= t "book.nothing" %></center>
+  <% end %>
+  <div id="pagination" class="apple-pagination">
+    <%= paginate books_support.books_search, remote: true %>
+  </div>
+</div>

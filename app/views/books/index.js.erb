@@ -1,0 +1,6 @@
+$('#book-content').html('<%= j render "index_content",
+  books_support: @books_support %>');
+$('#book-search').html('<%= j render "index_search", books_support: @books_support,
+  result: @books_support.books_search %>');
+$('#pagination').html('<%= j paginate(@books_support.books_search,
+  remote: true).to_s %>');
