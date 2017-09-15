@@ -2,15 +2,6 @@
   <%= link_to t("app.login"), new_session_path(resource_name) %><br />
 <% end %>
 
-<% if devise_mapping.registerable? && controller_name != "registrations" %>
-  <%= link_to t("app.signup"), new_registration_path(resource_name) %><br />
-<% end %>
-
-<% if devise_mapping.recoverable? && controller_name != "passwords" &&
-  controller_name != "registrations" %>
-  <%= link_to t("app.forgot_pass"), new_password_path(resource_name) %><br/>
-<% end %>
-
 <% if devise_mapping.confirmable? && controller_name != "confirmations" %>
   <%= link_to t("confirm.confirm_2")
     new_confirmation_path(resource_name) %><br />
@@ -24,8 +15,26 @@
 <% end %>
 
 <% if devise_mapping.omniauthable? %>
+  <div class="omni-title">
+    <div class="left-line">
+    </div>
+    <div class="content">
+      <%= t "common.or" %>
+    </div>
+    <div class="right-line">
+    </div>
+  </div>
   <% resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to "#{t("app.login_with")} #{OmniAuth::Utils.camelize(provider)}",
-      omniauth_authorize_path(resource_name, provider) %><br />
+    <% if OmniAuth::Utils.camelize(provider) == "Facebook" %>
+      <%= link_to omniauth_authorize_path(resource_name, provider),
+        class: "face-auth" do %>
+        <%= fa_icon "facebook-square" %>
+      <% end %>
+    <% elsif OmniAuth::Utils.camelize(provider) == "GoogleOauth2" %>
+      <%= link_to omniauth_authorize_path(resource_name, provider),
+        class: "google-auth" do %>
+        <%= fa_icon "google-plus-official" %>
+      <% end %>
+    <% end %>
   <% end %>
 <% end %>

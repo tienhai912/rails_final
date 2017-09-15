@@ -1,4 +1,22 @@
 en:
+  footer:
+    title: SUBSCRIBE TO OUR NEWS LETTER
+    content: "Enter your e-mail address to receive regular updates,
+      as well as news on upcoming events and special offers."
+    email: "Email address"
+  static:
+    category:
+      title: "SHOP CATEGORY"
+      type:
+        type_1: "E-BOOKS"
+        type_2: "TEXT BOOKS"
+        type_3: "OFFER ZONE"
+      shop: "SHOP NOW"
+    quote: "I can say without doubt that your team are a true
+      pleasure to work with. They are easy to communicate with
+      which make process smooth. Highly recommended."
+    slogan: "Join 100,321 Happy readers And Get Access To Our Entire Collection
+      Of 1000 ebooks For The Price Of One"
   common:
     sure: "Are you sure?"
     update: "Update"
@@ -11,6 +29,9 @@ en:
     hello: "Hello"
     unhappy: "Unhappy?"
     back: "Back"
+    book: "Books"
+    search: "Search"
+    or: "or"
   app:
     app_name: "Book Review"
     setting: "Setting"

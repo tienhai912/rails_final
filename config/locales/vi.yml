@@ -1,4 +1,23 @@
 vi:
+  footer:
+    title: THEO DÕI BẢN TIN CỦA CHÚNG TÔI
+    content: "Nhập địa chỉ e-mail của bạn để nhận thông tin
+      cập nhật thường xuyên, cũng như tin tức về các sự kiện sắp tới
+      và những ưu đãi đặc biệt."
+    email: "Địa chỉ email"
+  static:
+    category:
+      title: "SHOP CATEGORY"
+      type:
+        type_1: "E-BOOKS"
+        type_2: "TEXT BOOKS"
+        type_3: "OFFER ZONE"
+      shop: "SHOP NOW"
+    quote: "Tôi có thể nói rằng không nghi ngờ gì nữa rằng nhóm của bạn
+      là một niềm vui thật sự để làm việc với. Họ dễ dàng liên lạc với
+      nhau mà làm cho quá trình trơn tru. Rat khuyen khich."
+    slogan: "Join 100,321 Happy readers And Get Access To Our Entire Collection
+      Of 1000 ebooks For The Price Of One"
   common:
     sure: "Bạn có chắc không?"
     update: "Cập nhật"
@@ -11,6 +30,9 @@ vi:
     hello: "Xin chào"
     unhappy: "Không hạnh phúc"
     back: "Quay trở về"
+    book: "Sách"
+    search: "Tìm kiếm"
+    or: "Hoặc"
   app:
     app_name: "Book Review"
     setting: "Thiết lập"
