@@ -1,0 +1,59 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+$blue: #00f;
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.text-left {
+  text-align: center;
+}
+
+.book-detail {
+  height: 300px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.book-cover {
+  margin-bottom: 18px;
+  margin-top: 18px;
+  max-width: 25%;
+  width: 25%;
+}
+
+.book-des {
+  height: 200px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.book-action {
+  font-size: 24px;
+  height: 43px;
+}
+
+.book-index-btn {
+  height: 100%;
+  margin-left: 40px;
+  width: 100%;
+}
+
+.book-index-title {
+  color: $blue;
+  font-size: 32px;
+}
+
+.book-index-cover {
+  height: 265px;
+  width: 207px;
+}

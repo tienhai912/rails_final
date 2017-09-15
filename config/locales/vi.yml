@@ -78,3 +78,13 @@ vi:
       rằng mật khẩu của bạn đã được thay đổi."
     change_4: "để trống nếu
        bạn không muốn thay đổi nó"
+  books:
+    sort_by: "Sắp xếp theo "
+    showing: "Hiển thị "
+    result: "kết quả"
+    of: " trong "
+    zero: "0 - 0 trong 0 kết quả"
+    one: "1 - 1 trong 1 kết quả"
+    publish_date: "Ngày xuất bản"
+    title: "Tiêu đề"
+    nothing: "Không có kết quả"

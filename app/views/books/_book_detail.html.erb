@@ -1,0 +1,29 @@
+<div class="book-detail col-xs-12">
+  <div class="book-cover col-xs-3">
+    <% if book.cover %>
+      <%= link_to book_path(params[:locale], book.id) do %>
+        <%= image_tag book.cover, class: "book-index-cover" %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="book-info col-xs-8">
+    <div class="book-des">
+      <div class="book-index-title">
+        <%= book.title %>
+      </div>
+      <div class="book-index-author">
+        <%= book.author %>
+      </div>
+      <div class="book-index-date">
+        <%= book.publish_date %>
+      </div>
+      <br>
+      <div class="book-index-des">
+        <%= book.description %>
+      </div>
+    </div>
+    <div class="book-action">
+      <button class="btn btn-primary book-index-btn"></button>
+    </div>
+  </div>
+</div>

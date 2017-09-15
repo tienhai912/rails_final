@@ -1,4 +1,4 @@
-class AddDeviseToUsers < ActiveRecord::Migration[5.1]
+class AddDeviseToUsers < ActiveRecord::Migration[5.0]
   def self.up
     create_table :users do |t|
 
