@@ -23,7 +23,7 @@ RSpec.describe "books/index", type: :view do
       render
       @books.each do |book|
         expect(rendered).to include book.title, book.author,
-          book.publish_date.to_s, book.description
+          book.publish_date.strftime(I18n.t("date_format_1")), book.description
       end
     end
   end

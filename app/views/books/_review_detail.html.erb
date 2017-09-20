@@ -1,0 +1,17 @@
+<br>
+<div>
+  <div>
+    <%= review.user_name %>
+  </div>
+  <div>
+    <%= review.created_at.strftime I18n.t("date_format_2") %>
+  </div>
+  <div>
+    <%= t "books.rate" %>
+  </div>
+  <br>
+  <div>
+    <%= review.content %>
+  </div>
+</div>
+<br>
