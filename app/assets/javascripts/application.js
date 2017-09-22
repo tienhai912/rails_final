@@ -16,4 +16,5 @@
 //= require bootstrap
 //= require turbolinks
 //= require jquery-ui
+//= require ckeditor/init
 //= require_tree .

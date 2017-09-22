@@ -1,10 +1,12 @@
 <div class="book-detail">
-  <div class="book-cover col-xs-12 col-sm-4">
-    <% if book.cover %>
-      <%= link_to book_path(params[:locale], book.id) do %>
-        <%= image_tag book.cover, class: "book-index-cover" %>
+  <div class="book-cover-box col-xs-12 col-sm-4">
+    <div class="book-cover">
+      <% if book.cover %>
+        <%= link_to book_path(params[:locale], book.id) do %>
+          <%= image_tag book.cover, class: "book-index-cover" %>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
   <div class="book-info col-xs-12 col-sm-8">
     <div class="book-des">

@@ -1,7 +1,7 @@
 class Book < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
-  has_many :reviews, dependent: :destroy
   has_many :book_categories, as: :book, dependent: :destroy
+  has_many :reviews, ->{order(created_at: :desc)}, dependent: :destroy
 
   validates :title, presence: true, length: {maximum: Settings.name_max}
   validates :publish_date, presence: true

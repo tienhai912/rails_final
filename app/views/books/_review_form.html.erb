@@ -1,0 +1,13 @@
+<%= form_for review do |f| %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.hidden_field :book_id %>
+  <%= f.label :content, t("review.content"), class: "review-content-label" %>
+  <%= f.cktext_area :content, class: "review-content",
+    placeholder: t("books.write_review") %>
+  <br>
+  <div class="review-button">
+    <%= f.submit t("button.submit"), class: "btn btn-primary" %>
+    <%= f.submit t("button.clear"), type: :reset,
+      class: "btn btn-default" %>
+  </div>
+<% end %>

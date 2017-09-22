@@ -15,4 +15,12 @@ $(document).on('turbolinks:load', function(){
     $('#index-from').val('');
     $('#index-to').val('');
   });
+
+  $('textarea').keyup(function() {
+    $(this).height(30);
+    $(this).height(this.scrollHeight + 15 +
+      parseFloat($(this).css('borderTopWidth')) +
+      parseFloat($(this).css('borderBottomWidth'))
+    );
+  });
 });

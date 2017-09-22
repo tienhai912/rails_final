@@ -11,6 +11,6 @@ class UsersController < ApplicationController
 
   def find_user
     @user = User.find_by id: params[:id]
-    render_not_found unless @user
+    render_not_found unless user
   end
 end

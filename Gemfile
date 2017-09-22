@@ -31,6 +31,7 @@ gem "omniauth-google-oauth2"
 gem "omniauth-facebook"
 gem "figaro"
 gem "simplecov-rcov"
+gem "ckeditor"
 
 group :development, :test do
   gem "byebug", platform: :mri

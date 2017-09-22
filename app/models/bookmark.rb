@@ -12,6 +12,10 @@ class Bookmark < ApplicationRecord
 
   validates :status, presence: true
 
-  CREATE_PARAMS = %i(:user_id, :book_id,
-    :start_read, :finish_read).freeze
+  CREATE_PARAMS = %i(
+    user_id
+    book_id
+    start_read
+    finish_read
+  ).freeze
 end
