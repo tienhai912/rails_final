@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     devise_for :users, skip: :omniauth_callbacks
     root "static_pages#home"
     resources :books, only: %i(index show)
+    resources :bookmarks, only: %i(create destroy update)
   end
 end

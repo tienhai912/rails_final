@@ -23,7 +23,8 @@
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li>
-            <%= t "common.books" %>
+            <%= link_to t("common.books"),
+              books_path(locale: I18n.locale.to_s) %>
           </li>
           <li class="dropdown">
             <%= link_to "#", class: "dropdown-toggle",

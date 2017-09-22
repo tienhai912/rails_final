@@ -11,9 +11,13 @@
 
   <body>
     <%= render "shared/navbar" %>
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>">
+        <%= message %>
+      </div>
+    <% end %>
     <div class="main-body">
       <%= yield %>
     </div>
-    <%= render "shared/footer" %>
   </body>
 </html>
