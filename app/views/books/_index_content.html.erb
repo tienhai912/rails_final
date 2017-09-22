@@ -1,4 +1,4 @@
-<div id="book-content">
+<div id="book-content" class="book-content">
   <% if books_support.books_search.any? %>
     <% books_support.books_search.each do |book| %>
       <%= render "book_detail", book: book %>

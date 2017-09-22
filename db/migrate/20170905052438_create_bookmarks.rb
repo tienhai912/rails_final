@@ -3,8 +3,8 @@ class CreateBookmarks < ActiveRecord::Migration[5.0]
     create_table :bookmarks do |t|
       t.integer :user_id
       t.integer :book_id
-      t.boolean :favorite
-      t.integer :status
+      t.boolean :favorite, default: false
+      t.integer :status, default: 0
       t.datetime :start_read
       t.datetime :finish_read
 

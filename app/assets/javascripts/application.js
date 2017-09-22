@@ -17,7 +17,3 @@
 //= require turbolinks
 //= require jquery-ui
 //= require_tree .
-
-$(document).ready(function(){
-  console.log(I18n.t('app.alert'));
-});

@@ -2,11 +2,15 @@
 @import "bootstrap";
 @import "font-awesome";
 
-$blue: #00f;
 $alto: #dadada;
 $black: #000;
-$white: #fff;
+$blue: #00f;
+$cornflower-blue: #6495ed;
+$dark-silver: #aaa;
 $gray-light: #eee;
+$gray-lighter: #cdcdcd;
+$green: #27ae61;
+$white: #fff;
 
 .left {
   float: left;
@@ -17,16 +21,32 @@ $gray-light: #eee;
 }
 
 .text-left {
+  box-shadow: 1px 1px 1px 1px $gray-lighter;
+  height: 150px;
+  margin-top: 25px;
+  padding: 8px;
   text-align: center;
 }
 
+.book-content {
+  margin-top: 20px;
+}
+
 .book-detail {
+  box-shadow: 1px 1px 1px 1px $gray-lighter;
   height: 300px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   margin-top: 5px;
+  padding: 0 17px;
+
+  &:hover {
+    box-shadow: 1px 1px 2px 2px $gray-lighter;
+    transition: all .8s ease;
+  }
 }
 
 .book-cover {
+  box-shadow: 1px 1px 1px 1px $gray-lighter;
   margin-bottom: 18px;
   margin-top: 18px;
   max-width: 25%;
@@ -35,26 +55,56 @@ $gray-light: #eee;
 
 .book-des {
   height: 200px;
-  margin-bottom: 20px;
-  margin-left: 40px;
-  margin-top: 20px;
+  margin: 15px 0 15px 35px;
   text-align: left;
 }
 
 .book-action {
+  display: inline-block;
+  float: left;
   font-size: 24px;
   height: 43px;
+  padding-left: 35px;
+  text-align: left;
+
+  a {
+    line-height: 29px;
+  }
+
+  .bookmark-link {
+    float: left;
+  }
 }
 
 .book-index-btn {
+  background-color: $green;
+  box-shadow: 1px 1px 1px 1px $gray-lighter;
+  color: $white;
   height: 100%;
-  margin-left: 40px;
-  width: 100%;
+  margin-right: 20px;
+  width: 100px;
 }
 
 .book-index-title {
-  color: $blue;
+  color: $green;
   font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.book-info {
+  font-size: 1.2em;
+
+  .item {
+    margin-bottom: 10px;
+  }
+
+  .title {
+    color: $green;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 15px;
+  }
 }
 
 .book-index-cover {
@@ -123,4 +173,46 @@ $gray-light: #eee;
 
 .book-show-full-info {
   height: 500px;
+}
+
+.apple-pagination {
+  cursor: default;
+  font-size: 18px;
+  font-weight: 200;
+  text-align: center;
+
+  a,
+  span {
+    padding: 0 2px;
+  }
+
+  .disabled {
+    color: $dark-silver;
+  }
+
+  .current {
+    background-color: $cornflower-blue;
+    border-radius: 1em;
+    color: $white;
+    display: inline-block;
+    font-style: normal;
+    font-weight: bold;
+    height: 2em;
+    padding-top: 5px;
+    width: 2em;
+  }
+
+  a {
+    color: $cornflower-blue;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+}
+
+.hide-link {
+  display: none !important;
 }

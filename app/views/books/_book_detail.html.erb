@@ -1,31 +1,115 @@
-<div class="book-detail col-xs-12">
-  <div class="book-cover col-xs-3">
+<div class="book-detail">
+  <div class="book-cover col-xs-12 col-sm-4">
     <% if book.cover %>
       <%= link_to book_path(params[:locale], book.id) do %>
         <%= image_tag book.cover, class: "book-index-cover" %>
       <% end %>
     <% end %>
   </div>
-  <div class="book-info col-xs-8">
+  <div class="book-info col-xs-12 col-sm-8">
     <div class="book-des">
-      <div class="book-index-title">
+      <p class="book-index-title">
         <%= book.title %>
-      </div>
-      <div class="book-index-author">
-        <%= t "books.author" %>:
+      </p>
+      <div class="item book-index-author">
+        <p class="title"><%= t "books.author" %>:</p>
         <%= book.author %>
       </div>
-      <div class="book-index-date">
-        <%= t "books.publish_date" %>:
-        <%= book.publish_date.strftime I18n.t("date_format_1") %>
+      <div class="item book-index-date">
+        <p class="title"><%= t "books.publish_date" %>:</p>
+        <%= book.publish_date.strftime I18n.t("books.date_format_1") %>
       </div>
-      <br>
-      <div class="book-index-des">
+      <p class="item book-index-des">
         <%= book.description %>
-      </div>
+      </p>
     </div>
     <div class="book-action">
-      <button class="btn btn-primary book-index-btn"></button>
+      <% if user_signed_in? %>
+        <% unless Bookmark.current_user_bookmark_book(
+          book.id, current_user.id).is_a? Bookmark %>
+          <div id="bm-<%= book.id %>" class="bookmark-link">
+            <%= link_to t("books.book_mark"),
+              bookmarks_path(id: book.id,
+              locale: I18n.locale.to_s),
+              class: "btn book-index-btn",
+              method: :post, remote: true %>
+          </div>
+          <div id="ubm-<%= book.id %>" class="bookmark-link hide-link">
+            <%= link_to t("books.unbook_mark"),
+              bookmark_path(id: book.id,
+              locale: I18n.locale.to_s),
+              class: "btn book-index-btn",
+              method: :delete, remote: true %>
+          </div>
+          <div id="fav-<%= book.id %>" class="bookmark-link hide-link">
+            <%= link_to t("books.fav"),
+              bookmark_path(
+              id: book.id,
+              locale: I18n.locale.to_s, favorite: "true"),
+              class: "btn book-index-btn",
+              method: :put, remote: true %>
+            </div>
+            <div id="unfav-<%= book.id %>" class="bookmark-link hide-link">
+              <%= link_to t("books.unfav"),
+                bookmark_path(
+                id: book.id,
+                locale: I18n.locale.to_s, favorite: "false"),
+                class: "btn book-index-btn",
+                method: :put, remote: true %>
+            </div>
+        <% else %>
+          <div id="bm-<%= book.id %>" class="bookmark-link hide-link">
+            <%= link_to t("books.book_mark"),
+              bookmarks_path(id: book.id, locale: I18n.locale.to_s),
+              class: "btn book-index-btn",
+              method: :post, remote: true %>
+          </div>
+          <div id="ubm-<%= book.id %>" class="bookmark-link">
+            <%= link_to t("books.unbook_mark"),
+              bookmark_path(id: book.id,
+              locale: I18n.locale.to_s),
+              class: "btn book-index-btn",
+              method: :delete, remote: true %>
+          </div>
+          <% if Bookmark.get_favorite(
+              book.id, current_user.id) %>
+            <div id="fav-<%= book.id %>" class="bookmark-link hide-link">
+              <%= link_to t("books.fav"),
+                bookmark_path(
+                id: book.id,
+                locale: I18n.locale.to_s, favorite: "true"),
+                class: "btn book-index-btn",
+                method: :put, remote: true %>
+            </div>
+            <div id="unfav-<%= book.id %>" class="bookmark-link">
+              <%= link_to t("books.unfav"),
+                bookmark_path(
+                id: book.id,
+                locale: I18n.locale.to_s, favorite: "false"),
+                class: "btn book-index-btn",
+                method: :put, remote: true %>
+            </div>
+          <% else %>
+            <div id="fav-<%= book.id %>" class="bookmark-link">
+              <%= link_to t("books.fav"),
+                bookmark_path(
+                id: book.id,
+                locale: I18n.locale.to_s, favorite: "true"),
+                class: "btn book-index-btn",
+                method: :put, remote: true %>
+            </div>
+            <div id="unfav-<%= book.id %>" class="bookmark-link hide-link">
+              <%= link_to t("books.unfav"),
+                bookmark_path(
+                id: book.id,
+                locale: I18n.locale.to_s, favorite: "false"),
+                class: "btn book-index-btn",
+                method: :put, remote: true %>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+      <button class="btn book-index-btn"><%= t "books.review" %></button>
     </div>
   </div>
 </div>
