@@ -5,6 +5,7 @@ class User < ApplicationRecord
 
   has_one :profile, dependent: :destroy
   has_many :bookmarks, dependent: :destroy
+  has_many :books, through: :bookmarks
   has_many :reviews, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy

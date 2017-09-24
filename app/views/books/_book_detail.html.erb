@@ -25,8 +25,7 @@
     </div>
     <div class="book-action">
       <% if user_signed_in? %>
-        <% unless Bookmark.current_user_bookmark_book(
-          book.id, current_user.id).is_a? Bookmark %>
+        <% unless current_user.books.include? book %>
           <div id="bm-<%= book.id %>" class="bookmark-link">
             <%= link_to t("books.book_mark"),
               bookmarks_path(id: book.id,
@@ -45,18 +44,18 @@
             <%= link_to t("books.fav"),
               bookmark_path(
               id: book.id,
-              locale: I18n.locale.to_s, favorite: "true"),
+              locale: I18n.locale.to_s, favorite: 1),
               class: "btn book-index-btn",
               method: :put, remote: true %>
-            </div>
-            <div id="unfav-<%= book.id %>" class="bookmark-link hide-link">
-              <%= link_to t("books.unfav"),
-                bookmark_path(
-                id: book.id,
-                locale: I18n.locale.to_s, favorite: "false"),
-                class: "btn book-index-btn",
-                method: :put, remote: true %>
-            </div>
+          </div>
+          <div id="unfav-<%= book.id %>" class="bookmark-link hide-link">
+            <%= link_to t("books.unfav"),
+              bookmark_path(
+              id: book.id,
+              locale: I18n.locale.to_s),
+              class: "btn book-index-btn",
+              method: :put, remote: true %>
+          </div>
         <% else %>
           <div id="bm-<%= book.id %>" class="bookmark-link hide-link">
             <%= link_to t("books.book_mark"),
@@ -71,13 +70,12 @@
               class: "btn book-index-btn",
               method: :delete, remote: true %>
           </div>
-          <% if Bookmark.get_favorite(
-              book.id, current_user.id) %>
+          <% if @books_had_bookmarked.include? book.id %>
             <div id="fav-<%= book.id %>" class="bookmark-link hide-link">
               <%= link_to t("books.fav"),
                 bookmark_path(
                 id: book.id,
-                locale: I18n.locale.to_s, favorite: "true"),
+                locale: I18n.locale.to_s, favorite: 1),
                 class: "btn book-index-btn",
                 method: :put, remote: true %>
             </div>
@@ -85,7 +83,7 @@
               <%= link_to t("books.unfav"),
                 bookmark_path(
                 id: book.id,
-                locale: I18n.locale.to_s, favorite: "false"),
+                locale: I18n.locale.to_s),
                 class: "btn book-index-btn",
                 method: :put, remote: true %>
             </div>
@@ -94,7 +92,7 @@
               <%= link_to t("books.fav"),
                 bookmark_path(
                 id: book.id,
-                locale: I18n.locale.to_s, favorite: "true"),
+                locale: I18n.locale.to_s, favorite: 1),
                 class: "btn book-index-btn",
                 method: :put, remote: true %>
             </div>
@@ -102,7 +100,7 @@
               <%= link_to t("books.unfav"),
                 bookmark_path(
                 id: book.id,
-                locale: I18n.locale.to_s, favorite: "false"),
+                locale: I18n.locale.to_s),
                 class: "btn book-index-btn",
                 method: :put, remote: true %>
             </div>

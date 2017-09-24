@@ -15,7 +15,8 @@ class BookmarksController < ApplicationController
   end
 
   def update
-    if book_mark.update_attributes favorite: params[:favorite]
+    if (params[:favorite] and book_mark.is_favorite!) ||
+      (!params[:favorite] and book_mark.not_favorite!)
       response_result
     else
       flash[:danger] = t "books.favorite_error"

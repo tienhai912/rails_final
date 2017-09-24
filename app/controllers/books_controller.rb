@@ -2,9 +2,15 @@ class BooksController < ApplicationController
   before_action :load_require_index, only: :index
   before_action :find_book, only: :show
 
-  attr_reader :book
+  attr_reader :book, :bookmarks, :books_had_bookmarked
 
-  def index; end
+  def index
+    @bookmarks = current_user.bookmarks.is_favorite
+    @books_had_bookmarked = []
+    bookmarks.each do |bookmark|
+      books_had_bookmarked.push bookmark.book_id
+    end
+  end
 
   def show
     @review_list = book.reviews.page(params[:page])
