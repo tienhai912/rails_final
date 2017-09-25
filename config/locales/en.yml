@@ -32,9 +32,11 @@ en:
     book: "Books"
     search: "Search"
     or: "or"
+    update_profile: "Update profile"
   app:
     app_name: "Book Review"
     setting: "Setting"
+    profile_page: "Personal page"
     signup: "Signup"
     login: "Login"
     logout: "Logout"
