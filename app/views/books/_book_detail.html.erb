@@ -70,7 +70,7 @@
               class: "btn book-index-btn",
               method: :delete, remote: true %>
           </div>
-          <% if @books_had_bookmarked.include? book.id %>
+          <% if books_had_bookmarked.include? book.id %>
             <div id="fav-<%= book.id %>" class="bookmark-link hide-link">
               <%= link_to t("books.fav"),
                 bookmark_path(

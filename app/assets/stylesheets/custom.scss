@@ -106,7 +106,7 @@ body {
     display: flex;
     font-size: 1.2em;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 5px;
     text-align: center;
     text-transform: uppercase;
 
@@ -145,23 +145,26 @@ body {
     padding: 20px;
 
     .side-link {
-      float: right;
+      display: inline-block;
+      margin-top: 15px;
+      width: 100%;
     }
   }
 
   .actions {
     display: inline-block;
     float: left;
+    width: 100%;
 
     .btn {
       background-color: $green;
       border-color: $green;
       margin-top: 5px;
-      width: 150px;
+      width: 100%;
     }
   }
 
-  .signup-form {
+  .authen-form {
     padding: 20px;
 
     .btn {

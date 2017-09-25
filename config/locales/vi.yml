@@ -36,6 +36,7 @@ vi:
   app:
     app_name: "Book Review"
     setting: "Thiết lập"
+    profile_page: "Trang cá nhân"
     signup: "Đăng kí"
     login: "Đăng nhập"
     logout: "Đăng xuất"

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
   scope "/(:locale)", locale: /en|vi/ do
     devise_for :users, skip: :omniauth_callbacks
+    resources :users, only: %i(show)
     root "static_pages#home"
     resources :books, only: %i(index show)
     resources :bookmarks, only: %i(create destroy update)

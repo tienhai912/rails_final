@@ -33,10 +33,6 @@ class BookmarksController < ApplicationController
 
   private
 
-  def bookmark_params
-    params.permit Bookmark::CREATE_PARAMS
-  end
-
   def response_result
     respond_to do |format|
       format.html{redirect_to :back}
