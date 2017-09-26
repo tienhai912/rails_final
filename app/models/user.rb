@@ -23,6 +23,10 @@ class User < ApplicationRecord
     foreign_key: :user_id, dependent: :destroy
   has_many :checked_requests, class_name: Request.name,
     foreign_key: :admin_id, dependent: :destroy
+  has_many :posts, dependent: :destroy
+
+  validates :name, presence: true
+  validates :email, presence: true, uniqueness: true
 
   class << self
     def from_omniauth auth

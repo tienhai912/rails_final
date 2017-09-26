@@ -1,6 +1,13 @@
 class Book < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
   has_many :reviews, dependent: :destroy
+  has_many :book_categories, as: :book, dependent: :destroy
 
-  belongs_to :category
+  validates :title, presence: true, length: {maximum: Settings.name_max}
+  validates :publish_date, presence: true
+  validates :author, presence: true
+  validates :pages, presence: true
+  validates :description, presence: true,
+    length: {maximum: Settings.description_max}
+  validates :cover, presence: true
 end

@@ -5,7 +5,7 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :email, default: ""
       t.string :encrypted_password, null: false, default: ""
-      t.boolean :admin
+      t.boolean :admin, default: false
       t.string :avatar
       t.string :provider
       t.string :uid
