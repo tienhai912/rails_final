@@ -127,3 +127,8 @@ en:
     cancel: "Cancel"
   bookmark:
     not_found: "Bookmark not found"
+    status:
+      change: "Change"
+      value_1: "not read"
+      value_2: "reading"
+      value_3: "finish"

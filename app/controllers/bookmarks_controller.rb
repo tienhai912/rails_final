@@ -15,8 +15,12 @@ class BookmarksController < ApplicationController
   end
 
   def update
-    if update_is_favorite || update_not_favorite
-      response_result
+    if (params[:favorite] and book_mark.is_favorite!) ||
+      (!params[:favorite] and !params[:status] and book_mark.not_favorite!) ||
+      (params[:status] == "0" and book_mark.not_read!) ||
+      (params[:status] == "1" and book_mark.reading!) ||
+      (params[:status] == "2" and book_mark.finish!)
+        response_result
     else
       flash[:danger] = t "books.favorite_error"
     end
@@ -53,13 +57,5 @@ class BookmarksController < ApplicationController
     return if book_mark
     flash[:danger] = t "books.not_found"
     redirect_to :back
-  end
-
-  def update_is_favorite
-    params[:favorite] && book_mark.is_favorite!
-  end
-
-  def update_not_favorite
-    !params[:favorite] && book_mark.not_favorite!
   end
 end

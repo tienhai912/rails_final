@@ -5,3 +5,26 @@
   $('#fav-<%= @book.id %>').removeClass('hide-link');
   $('#unfav-<%= @book.id %>').addClass('hide-link');
 <% end %>
+
+<% if params[:status] == '1' %>
+  $('#not-read-<%= @book.id %>').addClass('default-link');
+  $('#not-read-<%= @book.id %>').removeClass('active-link');
+  $('#reading-<%= @book.id %>').addClass('active-link');
+  $('#reading-<%= @book.id %>').removeClass('default-link');
+  $('#finish-<%= @book.id %>').removeClass('active-link');
+  $('#finish-<%= @book.id %>').addClass('default-link');
+<% elsif params[:status] == '2' %>
+  $('#not-read-<%= @book.id %>').addClass('default-link');
+  $('#not-read-<%= @book.id %>').removeClass('active-link');
+  $('#reading-<%= @book.id %>').removeClass('active-link');
+  $('#reading-<%= @book.id %>').addClass('default-link');
+  $('#finish-<%= @book.id %>').addClass('active-link');
+  $('#finish-<%= @book.id %>').removeClass('default-link');
+<% elsif params[:status] == '0' %>
+  $('#not-read-<%= @book.id %>').removeClass('default-link');
+  $('#not-read-<%= @book.id %>').addClass('active-link');
+  $('#reading-<%= @book.id %>').removeClass('active-link');
+  $('#reading-<%= @book.id %>').addClass('default-link');
+  $('#finish-<%= @book.id %>').removeClass('active-link');
+  $('#finish-<%= @book.id %>').addClass('default-link');
+<% end %>
