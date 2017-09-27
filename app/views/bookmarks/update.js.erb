@@ -1,7 +1,7 @@
 <% if params[:favorite] %>
   $('#fav-<%= @book.id %>').addClass('hide-link');
   $('#unfav-<%= @book.id %>').removeClass('hide-link');
-<% else %>
+<% elsif !params[:favorite] and !params[:status]  %>
   $('#fav-<%= @book.id %>').removeClass('hide-link');
   $('#unfav-<%= @book.id %>').addClass('hide-link');
 <% end %>
