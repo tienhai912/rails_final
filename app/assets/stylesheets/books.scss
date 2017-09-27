@@ -54,7 +54,7 @@ $white: #fff;
 }
 
 .book-des {
-  height: 200px;
+  height: 155px;
   margin: 15px 0 15px 35px;
   text-align: left;
 }
@@ -95,15 +95,17 @@ $white: #fff;
 .book-info {
   font-size: 1.2em;
 
-  .item {
-    margin-bottom: 10px;
-  }
-
   .title {
     color: $green;
     display: inline-block;
     font-weight: bold;
     margin-right: 15px;
+  }
+
+  .book-index-btn {
+    float: left;
+    margin-left: 35px;
+    margin-top: 10px;
   }
 }
 
@@ -305,4 +307,89 @@ $white: #fff;
       display: inline-block;
     }
   }
+}
+.form-change-status {
+  display: inline-block;
+  margin-bottom: 10px;
+
+  input {
+    float: left;
+  }
+
+  .status {
+    float: left;
+    margin-right: 15px;
+    width: 100px;
+  }
+}
+
+.icon-link {
+  display: inline-block;
+
+  a {
+    color: $green;
+
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+.icon-link-lists {
+  padding-top: 17px;
+
+  .bm-link {
+    margin-right: 15px;
+  }
+}
+
+.active-link {
+  background-color: $green;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 1px $gray-lighter;
+  color: $white;
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 8px 15px;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.default-link {
+  background-color: $white;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 1px $gray-lighter;
+  color: $green;
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 8px 15px;
+
+  &:hover {
+    color: $green;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: $green;
+    text-decoration: none;
+  }
+}
+
+.status-link {
+  display: inline-block;
+  margin: 15px 0 15px 35px;
+  text-align: left;
+  width: 100%;
+}
+
+.book-index-des {
+  display: inline-block;
 }

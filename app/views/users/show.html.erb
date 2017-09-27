@@ -18,7 +18,9 @@
         <div class="col-xs-4">
           <div class="book">
             <div class="cover">
-              <%= image_tag book.cover, class: "book-index-cover" %>
+              <%= link_to book_path(params[:locale], book.id) do %>
+                <%= image_tag book.cover, class: "book-index-cover" %>
+              <% end %>
             </div>
             <div class="info">
               <div class="author">
