@@ -111,3 +111,19 @@ en:
     bookmark_error: "Can not bookmark"
     unbookmark_error: "Can not unbookmark"
     favorite_error: "Can not favorite or unfavorite"
+    write_review: "Your thought about this book"
+  review:
+    success: "Your review has been saved"
+    fail: "Something wrong happens. Your review is not saved"
+    content: "Your review"
+    update_success: "Your review has been updated successfully"
+    update_fail: "Something wrong happens. Your review is not updated"
+    delete_success: "Your review has been deleted successfully"
+    delete_fail: "Something wrong happens. Your review is not deleted"
+    not_found: "Review found"
+  button:
+    submit: "Submit"
+    clear: "Clear"
+    cancel: "Cancel"
+  bookmark:
+    not_found: "Bookmark not found"

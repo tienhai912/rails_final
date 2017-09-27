@@ -9,7 +9,9 @@ $cornflower-blue: #6495ed;
 $dark-silver: #aaa;
 $gray-light: #eee;
 $gray-lighter: #cdcdcd;
+$gray-darker: #5a5a5a;
 $green: #27ae61;
+$purple: #5b00ff;
 $white: #fff;
 
 .left {
@@ -22,9 +24,8 @@ $white: #fff;
 
 .text-left {
   box-shadow: 1px 1px 1px 1px $gray-lighter;
-  height: 150px;
   margin-top: 25px;
-  padding: 8px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -49,8 +50,7 @@ $white: #fff;
   box-shadow: 1px 1px 1px 1px $gray-lighter;
   margin-bottom: 18px;
   margin-top: 18px;
-  max-width: 25%;
-  width: 25%;
+  width: 207px;
 }
 
 .book-des {
@@ -164,15 +164,20 @@ $white: #fff;
 
 .book-show-title {
   color: $blue;
-  font-size: 32px;
+  font-size: 2.1em;
 }
 
 .book-show-review {
+  box-shadow: 1px 1px 1px 1px $gray-lighter;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  padding: 20px 40px;
   text-align: left;
-}
 
-.book-show-full-info {
-  height: 500px;
+  &:hover {
+    box-shadow: 1px 1px 2px 2px $gray-lighter;
+    transition: all .8s ease;
+  }
 }
 
 .apple-pagination {
@@ -215,4 +220,89 @@ $white: #fff;
 
 .hide-link {
   display: none !important;
+}
+
+.book-show-full-info {
+  margin-top: 50px;
+}
+
+.book-show-all-des {
+  height: 362px;
+  margin: 15px 0 15px 35px;
+  text-align: left;
+}
+
+.book-show-info-detail {
+  height: 500px;
+}
+
+.book-show-action {
+  display: inline-block;
+  float: left;
+  font-size: 24px;
+  height: 60px;
+  padding-left: 35px;
+  text-align: left;
+
+  a {
+    line-height: 29px;
+  }
+
+  .bookmark-link {
+    float: left;
+  }
+}
+
+.book-show-review-detail {
+  box-shadow: 1px 1px 1px 1px $gray-lighter;
+  margin-bottom: 35px;
+  padding: 15px;
+  position: relative;
+
+  .writer {
+    color: $purple;
+    display: inline-block;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+
+  .content {
+    margin-top: 10px;
+  }
+
+  .rate {
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  .timestamp {
+    color: $gray-darker;
+    display: inline-block;
+    float: right;
+  }
+
+  .review-edit-button {
+    background: $white;
+    bottom: -25px;
+    box-shadow: 1px 3px 1px 0 $gray-lighter;
+    color: $gray-darker;
+    display: none;
+    float: right;
+    padding: 3px;
+    position: absolute;
+    right: 15px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &:hover {
+    box-shadow: 1px 1px 3px 2px $gray-lighter;
+    transition: all .2s ease;
+
+    .review-edit-button {
+      display: inline-block;
+    }
+  }
 }

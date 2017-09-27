@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     root "static_pages#home"
     resources :books, only: %i(index show)
     resources :bookmarks, only: %i(create destroy update)
+    resources :reviews, only: %i(create destroy update)
   end
 end
