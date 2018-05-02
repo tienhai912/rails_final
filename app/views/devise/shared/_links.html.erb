@@ -1,0 +1,40 @@
+<% if controller_name != "sessions" %>
+  <%= link_to t("app.login"), new_session_path(resource_name) %><br />
+<% end %>
+
+<% if devise_mapping.confirmable? && controller_name != "confirmations" %>
+  <%= link_to t("confirm.confirm_2")
+    new_confirmation_path(resource_name) %><br />
+<% end %>
+
+<% if devise_mapping.lockable? &&
+  resource_class.unlock_strategy_enabled?(:email) &&
+  controller_name != "unlocks" %>
+  <%= link_to t("cofirm.confirm_1"),
+    new_unlock_path(resource_name) %><br />
+<% end %>
+
+<% if devise_mapping.omniauthable? %>
+  <div class="omni-title">
+    <div class="left-line">
+    </div>
+    <div class="content">
+      <%= t "common.or" %>
+    </div>
+    <div class="right-line">
+    </div>
+  </div>
+  <% resource_class.omniauth_providers.each do |provider| %>
+    <% if OmniAuth::Utils.camelize(provider) == "Facebook" %>
+      <%= link_to omniauth_authorize_path(resource_name, provider),
+        class: "face-auth" do %>
+        <%= fa_icon "facebook-square" %>
+      <% end %>
+    <% elsif OmniAuth::Utils.camelize(provider) == "GoogleOauth2" %>
+      <%= link_to omniauth_authorize_path(resource_name, provider),
+        class: "google-auth" do %>
+        <%= fa_icon "google-plus-official" %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

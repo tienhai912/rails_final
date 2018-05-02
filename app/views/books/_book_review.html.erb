@@ -1,0 +1,19 @@
+<div>
+  <% if user_signed_in? %>
+    <%= render "review_form", review: book.reviews.new, book: book %>
+    <div class="review-line"></div>
+  <% end %>
+</div>
+<% if review_list.any? %>
+  <% review_list.each do |review| %>
+    <div class="book-show-review-detail" id="<%= review.id %>">
+      <%= render "review_detail", review: review %>
+    </div>
+  <% end %>
+<% else %>
+  <%= t "books.no_review" %>
+  <h3><%= t "books.be_first", book: book.title %></h3>
+<% end %>
+<div id="pagination" class="apple-pagination">
+  <%= paginate review_list, remote: true %>
+</div>

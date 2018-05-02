@@ -1,0 +1,51 @@
+<div class="authen-box">
+  <div class="title">
+    <%= t "common.edit" %> <%= resource_name.to_s.humanize %>
+  </div>
+  <div class="authen-form">
+    <%= form_for resource, as: resource_name,
+      url: registration_path(resource_name), html: {method: :put} do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email,
+          autofocus: true, class: "form-control" %>
+      </div>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>
+          <%= t "common.wait_infor" %>: <%= resource.unconfirmed_email %>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :password %> <i>(<%= t "change.change_4" %>)</i><br/>
+        <%= f.password_field :password,
+          autocomplete: "off", class: "form-control" %>
+        <% if @minimum_password_length %>
+          <br/>
+          <em><%= @minimum_password_length %> <%= t "common.char_min" %></em>
+        <% end %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation,
+          autocomplete: "off", class: "form-control" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :current_password %>
+          <i>(<%= t "common.need_current_pass" %>)</i><br/>
+        <%= f.password_field :current_password,
+          autocomplete: "off", class: "form-control" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit t("common.update"),
+          class: "btn btn-primary update-btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>

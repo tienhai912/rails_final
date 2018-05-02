@@ -1,0 +1,5 @@
+books:
+  limit: 6
+  review: 5
+name_max: 100
+description_max: 200

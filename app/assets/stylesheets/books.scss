@@ -1,0 +1,395 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+$alto: #dadada;
+$black: #000;
+$blue: #00f;
+$cornflower-blue: #6495ed;
+$dark-silver: #aaa;
+$gray-light: #eee;
+$gray-lighter: #cdcdcd;
+$gray-darker: #5a5a5a;
+$green: #27ae61;
+$purple: #5b00ff;
+$white: #fff;
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.text-left {
+  box-shadow: 1px 1px 1px 1px $gray-lighter;
+  margin-top: 25px;
+  padding: 20px;
+  text-align: center;
+}
+
+.book-content {
+  margin-top: 20px;
+}
+
+.book-detail {
+  box-shadow: 1px 1px 1px 1px $gray-lighter;
+  height: 300px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  padding: 0 17px;
+
+  &:hover {
+    box-shadow: 1px 1px 2px 2px $gray-lighter;
+    transition: all .8s ease;
+  }
+}
+
+.book-cover {
+  box-shadow: 1px 1px 1px 1px $gray-lighter;
+  margin-bottom: 18px;
+  margin-top: 18px;
+  width: 207px;
+}
+
+.book-des {
+  height: 155px;
+  margin: 15px 0 15px 35px;
+  text-align: left;
+}
+
+.book-action {
+  display: inline-block;
+  float: left;
+  font-size: 24px;
+  height: 43px;
+  padding-left: 35px;
+  text-align: left;
+
+  a {
+    line-height: 29px;
+  }
+
+  .bookmark-link {
+    float: left;
+  }
+}
+
+.book-index-btn {
+  background-color: $green;
+  box-shadow: 1px 1px 1px 1px $gray-lighter;
+  color: $white;
+  height: 100%;
+  margin-right: 20px;
+  width: 100px;
+}
+
+.book-index-title {
+  color: $green;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.book-info {
+  font-size: 1.2em;
+
+  .title {
+    color: $green;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 15px;
+  }
+
+  .book-index-btn {
+    float: left;
+    margin-left: 35px;
+    margin-top: 10px;
+  }
+}
+
+.book-index-cover {
+  height: 265px;
+  width: 207px;
+}
+
+.btn-search-book-index {
+  width: 80px;
+}
+
+.f-text.f-calendar {
+  background: url("http://www.hungrydeals.sg/bundles/insingpromotion/images/sprite_repeat.png") no-repeat right center;
+}
+
+.f-text {
+  border: 1px solid $alto;
+  border-radius: 4px;
+  color: $black;
+  display: block;
+  font-family: "hgw-HelveticaNeue", Arial, sans-serif;
+  max-width: 100%;
+}
+
+.pj-form-field {
+  background-color: $white;
+  border: solid 1px $alto;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 1px $gray-light;
+  font: normal 16px Verdana, sans-serif;
+  font-family: Verdana;
+  padding: 7px 6px;
+}
+
+.pj-form-field [type=text] {
+  height: 14px;
+  margin-top: 5px;
+  padding: 7px 6px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.book-show-cover {
+  height: 450px;
+  width: 350px;
+}
+
+.book-cover-container {
+  border: 1px solid $gray-light;
+}
+
+.book-show-info {
+  font-size: 16px;
+}
+
+.book-show-title {
+  color: $blue;
+  font-size: 2.1em;
+}
+
+.book-show-review {
+  box-shadow: 1px 1px 1px 1px $gray-lighter;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  padding: 20px 40px;
+  text-align: left;
+
+  &:hover {
+    box-shadow: 1px 1px 2px 2px $gray-lighter;
+    transition: all .8s ease;
+  }
+}
+
+.apple-pagination {
+  cursor: default;
+  font-size: 18px;
+  font-weight: 200;
+  text-align: center;
+
+  a,
+  span {
+    padding: 0 2px;
+  }
+
+  .disabled {
+    color: $dark-silver;
+  }
+
+  .current {
+    background-color: $cornflower-blue;
+    border-radius: 1em;
+    color: $white;
+    display: inline-block;
+    font-style: normal;
+    font-weight: bold;
+    height: 2em;
+    padding-top: 5px;
+    width: 2em;
+  }
+
+  a {
+    color: $cornflower-blue;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+}
+
+.hide-link {
+  display: none !important;
+}
+
+.book-show-full-info {
+  margin-top: 50px;
+}
+
+.book-show-all-des {
+  height: 362px;
+  margin: 15px 0 15px 35px;
+  text-align: left;
+}
+
+.book-show-info-detail {
+  height: 500px;
+}
+
+.book-show-action {
+  display: inline-block;
+  float: left;
+  font-size: 24px;
+  height: 60px;
+  padding-left: 35px;
+  text-align: left;
+
+  a {
+    line-height: 29px;
+  }
+
+  .bookmark-link {
+    float: left;
+  }
+}
+
+.book-show-review-detail {
+  box-shadow: 1px 1px 1px 1px $gray-lighter;
+  margin-bottom: 35px;
+  padding: 15px;
+  position: relative;
+
+  .writer {
+    color: $purple;
+    display: inline-block;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+
+  .content {
+    margin-top: 10px;
+  }
+
+  .rate {
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  .timestamp {
+    color: $gray-darker;
+    display: inline-block;
+    float: right;
+  }
+
+  .review-edit-button {
+    background: $white;
+    bottom: -25px;
+    box-shadow: 1px 3px 1px 0 $gray-lighter;
+    color: $gray-darker;
+    display: none;
+    float: right;
+    padding: 3px;
+    position: absolute;
+    right: 15px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &:hover {
+    box-shadow: 1px 1px 3px 2px $gray-lighter;
+    transition: all .2s ease;
+
+    .review-edit-button {
+      display: inline-block;
+    }
+  }
+}
+.form-change-status {
+  display: inline-block;
+  margin-bottom: 10px;
+
+  input {
+    float: left;
+  }
+
+  .status {
+    float: left;
+    margin-right: 15px;
+    width: 100px;
+  }
+}
+
+.icon-link {
+  display: inline-block;
+
+  a {
+    color: $green;
+
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+.icon-link-lists {
+  padding-top: 17px;
+
+  .bm-link {
+    margin-right: 15px;
+  }
+}
+
+.active-link {
+  background-color: $green;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 1px $gray-lighter;
+  color: $white;
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 8px 15px;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.default-link {
+  background-color: $white;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 1px $gray-lighter;
+  color: $green;
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 8px 15px;
+
+  &:hover {
+    color: $green;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: $green;
+    text-decoration: none;
+  }
+}
+
+.status-link {
+  display: inline-block;
+  margin: 15px 0 15px 35px;
+  text-align: left;
+  width: 100%;
+}
+
+.book-index-des {
+  display: inline-block;
+}

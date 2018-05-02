@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: hai172
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: book_review_development
+
+test:
+  <<: *default
+  database: book_review_test
+
+production:
+  <<: *default
+  database: book_review_production
+  username: book_review
+  password: <%= ENV['BOOK_REVIEW_DATABASE_PASSWORD'] %>

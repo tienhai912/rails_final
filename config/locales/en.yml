@@ -1,33 +1,134 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  footer:
+    title: SUBSCRIBE TO OUR NEWS LETTER
+    content: "Enter your e-mail address to receive regular updates,
+      as well as news on upcoming events and special offers."
+    email: "Email address"
+  static:
+    category:
+      title: "SHOP CATEGORY"
+      type:
+        type_1: "E-BOOKS"
+        type_2: "TEXT BOOKS"
+        type_3: "OFFER ZONE"
+      shop: "SHOP NOW"
+    quote: "I can say without doubt that your team are a true
+      pleasure to work with. They are easy to communicate with
+      which make process smooth. Highly recommended."
+    slogan: "Join 100,321 Happy readers And Get Access To Our Entire Collection
+      Of 1000 ebooks For The Price Of One"
+  common:
+    sure: "Are you sure?"
+    update: "Update"
+    need_current_pass: "we need your current password
+      to confirm your changes"
+    char_min: "characters minimum"
+    edit: "Edit"
+    wait_infor: "Currently waiting confirmation for"
+    confirm_account: "Confirm my account"
+    hello: "Hello"
+    unhappy: "Unhappy?"
+    back: "Back"
+    book: "Books"
+    search: "Search"
+    or: "or"
+    update_profile: "Update profile"
+  app:
+    app_name: "Book Review"
+    setting: "Setting"
+    profile_page: "Personal page"
+    signup: "Signup"
+    login: "Login"
+    logout: "Logout"
+    already_have_account: "Already have an account?"
+    toggle_navi: "Toggle navigation"
+    alert: "123"
+    resend_confirm: "Resend confirmation instructions"
+    welcome: "Welcome"
+    click_link_confirm: "You can confirm your account
+      email through the link below:"
+    change_pass: "Change your password"
+    forgot_pass: "Forgot your password?"
+    reset_pass_instruction: "Send me reset password instructions"
+    new_pass: "New password"
+    confirm_new_pass: "Confirm new password"
+    cancel_account: "Cancel my account"
+    login_with: "Sign in with"
+  unlock:
+    unlock_1: "Resend unlock instructions"
+    unlock_2: "Your account has been locked due to an excessive number
+      of unsuccessful sign in attempts."
+    unlock_3: "Click the link below to unlock your account:"
+    unlock_4: "Unlock my account"
+  confirm:
+    confirm_1: "Didn't receive confirmation instructions?"
+    confirm_2: "Didn't receive unlock instructions?"
+  reset:
+    reset_1: "Someone has requested a link to change your password.
+      You can do this through the link below."
+    reset_2: "Change my password"
+    reset_3: "If you didn't request this, please ignore this email."
+    reset_4: "Your password won't change until you
+      access the link above and create a new one."
+  change:
+    change_1: "We're contacting you to notify you that your email is
+      being changed to"
+    change_2: "We're contacting you to notify you that your email has been
+      changed to"
+    change_3: "We're contacting you to notify you that your
+      password has been changed."
+    change_4: "leave blank if you don't want to change it"
+  books:
+    sort_by: "Sort by "
+    showing: "Showing "
+    result: "results"
+    of: " of "
+    zero: "0 - 0 of 0 result"
+    one: "1 - 1 of 1 result"
+    publish_date: "Publish date"
+    title: "Title"
+    nothing: "No result"
+    search: "Search"
+    clear: "Clear"
+    choose: "Choose"
+    title2: "Title:"
+    author2: "Author:"
+    from: "From:"
+    to: "To:"
+    not_found: "No book found"
+    review: "Review"
+    no_review: "There are no reviews yet"
+    be_first: "Be the first to review \"%{book}\""
+    rate: "Rate"
+    date_format_1: "%d/%m/%Y"
+    date_format_2: "%d/%m/%Y %H:%M"
+    book_mark: "Bookmark"
+    unbook_mark: "Unbookmark"
+    review: "Review"
+    fav: "Favorite"
+    unfav: "Unfavorite"
+    author: "Author"
+    bookmark_error: "Can not bookmark"
+    unbookmark_error: "Can not unbookmark"
+    favorite_error: "Can not favorite or unfavorite"
+    write_review: "Your thought about this book"
+  review:
+    success: "Your review has been saved"
+    fail: "Something wrong happens. Your review is not saved"
+    content: "Your review"
+    update_success: "Your review has been updated successfully"
+    update_fail: "Something wrong happens. Your review is not updated"
+    delete_success: "Your review has been deleted successfully"
+    delete_fail: "Something wrong happens. Your review is not deleted"
+    not_found: "Review found"
+  button:
+    submit: "Submit"
+    clear: "Clear"
+    cancel: "Cancel"
+  bookmark:
+    not_found: "Bookmark not found"
+    status:
+      change: "Change"
+      value_1: "not read"
+      value_2: "reading"
+      value_3: "finish"

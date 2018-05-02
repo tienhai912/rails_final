@@ -1,0 +1,21 @@
+<div class="writer">
+  <%= review.user_name %>
+</div>
+<div class="rate">
+  <%= t "books.rate" %>
+</div>
+<div class="timestamp">
+  <%= review.created_at.strftime I18n.t("books.date_format_2") %>
+</div>
+<br>
+<div class="content">
+  <%= review.content.html_safe %>
+</div>
+<% if user_signed_in? && current_user == review.user %>
+  <div class="review-edit-button">
+    <i class="fa fa-lg fa-pencil fa-custom-review btn-review-edit"></i>
+    <%= link_to review_path(params[:locale], review.id), method: :delete do %>
+      <i class="fa fa-lg fa-times fa-custom-review btn-review-delete"></i>
+    <% end %>
+  </div>
+<% end %>

@@ -1,0 +1,56 @@
+<div class="text-left" id="book-search">
+  <div>
+    <%= t "books.sort_by" %>
+    <span class="index-dropdown">
+      <%= render "dropdown", books_support: books_support %>
+    </span>
+  </div>
+  <br>
+  <div>
+    <%= t "books.showing" %>
+    <% if result.count == 0 %>
+      <%= t("books.zero") %>
+    <% elsif result.count == 1 %>
+      <%= t("books.one") %>
+    <% else %>
+      <%= result.offset_value + 1 %> - <%= result.offset_value + result.length %>
+      <%= t "books.of" %>
+      <%= result.count %> <%= t("books.result") %>
+    <% end %>
+  </div>
+  <br>
+  <%= search_form_for books_support.search, url: books_path(params[:locale]),
+    remote: true, method: :get do |f| %>
+    <p>
+      <%= f.label t("books.title2") %>
+      <%= f.text_field :title_cont, id: "index-title",
+        class: "pj-form-field f-text" %>
+    </p>
+    <p>
+      <%= f.label t("books.author2") %>
+      <%= f.text_field :author_cont, id: "index-author",
+        class: "pj-form-field f-text" %>
+    </p>
+    <p>
+      <strong><%= t("books.publish_date") %>:</strong>
+    </p>
+    <p>
+      <%= f.label t("books.from") %>
+      <%= f.text_field :publish_date_gteq, id: "index-from",
+        class: "datepicker pj-form-field pointer f-text f-calendar" %>
+    </p>
+    <p >
+      <%= f.label t("books.to") %>
+      <%= f.text_field :publish_date_lteq, id: "index-to",
+        class: "datepicker pj-form-field pointer f-text f-calendar" %>
+    </p>
+    <br>
+    <p>
+      <label class="title">&nbsp;</label>
+      <%= f.submit  t("books.search"),
+        class: "btn btn-primary btn-search-book-index" %>
+      <%= link_to t("books.clear"), {remote: true},
+        class: "btn btn-default btn-search-book-index", id: "index-clear" %>
+    </p>
+  <% end %>
+</div>

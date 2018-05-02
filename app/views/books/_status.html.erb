@@ -1,0 +1,59 @@
+<% if status == "not-read" %>
+  <%= link_to t("bookmark.status.value_1"),
+    bookmark_path(
+    id: book.id,
+    status: 0,
+    locale: I18n.locale.to_s),
+    method: :put, remote: true,
+    class: "active-link",
+    id: "not-read-#{book.id}" %>
+<% else %>
+  <%= link_to t("bookmark.status.value_1"),
+    bookmark_path(
+    id: book.id,
+    status: 0,
+    locale: I18n.locale.to_s),
+    method: :put, remote: true,
+    class: "default-link",
+    id: "not-read-#{book.id}" %>
+<% end %>
+
+<% if status == "reading" %>
+  <%= link_to t("bookmark.status.value_2"),
+    bookmark_path(
+    id: book.id,
+    status: 1,
+    locale: I18n.locale.to_s),
+    method: :put, remote: true,
+    class: "active-link",
+    id: "reading-#{book.id}" %>
+<% else %>
+  <%= link_to t("bookmark.status.value_2"),
+    bookmark_path(
+    id: book.id,
+    status: 1,
+    locale: I18n.locale.to_s),
+    method: :put, remote: true,
+    class: "default-link",
+    id: "reading-#{book.id}" %>
+<% end %>
+
+<% if status == "finish" %>
+  <%= link_to t("bookmark.status.value_3"),
+    bookmark_path(
+    id: book.id,
+    status: 2,
+    locale: I18n.locale.to_s),
+    method: :put, remote: true,
+    class: "active-link",
+    id: "finish-#{book.id}" %>
+<% else %>
+  <%= link_to t("bookmark.status.value_3"),
+    bookmark_path(
+    id: book.id,
+    status: 2,
+    locale: I18n.locale.to_s),
+    method: :put, remote: true,
+    class: "default-link",
+    id: "finish-#{book.id}" %>
+<% end %>

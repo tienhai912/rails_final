@@ -1,0 +1,65 @@
+$gray-lighter: #e6e6e6;
+$gray-darker: #808080;
+$green: #27ae61;
+
+.personal-page {
+  font-size: 1.4em;
+  margin-top: 50px;
+
+  .row {
+    align-items: center;
+    display: flex;
+  }
+
+  .personal-info {
+    margin-bottom: 35px;
+  }
+
+  a {
+    color: $gray-darker;
+    text-decoration: none;
+  }
+
+  .edit-btn {
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px $gray-lighter;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+
+  .avatar {
+    border-radius: 50%;
+    float: right;
+    height: 160px;
+    width: 160px;
+  }
+
+  .book {
+    box-shadow: 0 0 3px 3px $gray-lighter;
+    display: inline-block;
+    height: 360px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .cover {
+    box-shadow: 0 2px 1px 1px $gray-lighter;
+  }
+
+  .info {
+    font-size: .9em;
+    padding: 15px;
+    text-align: left;
+
+    .title {
+      color: $green;
+      display: inline-block;
+      font-weight: bold;
+    }
+  }
+
+  .name {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+}

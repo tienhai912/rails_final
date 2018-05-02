@@ -1,0 +1,137 @@
+vi:
+  footer:
+    title: THEO DÕI BẢN TIN CỦA CHÚNG TÔI
+    content: "Nhập địa chỉ e-mail của bạn để nhận thông tin
+      cập nhật thường xuyên, cũng như tin tức về các sự kiện sắp tới
+      và những ưu đãi đặc biệt."
+    email: "Địa chỉ email"
+  static:
+    category:
+      title: "SHOP CATEGORY"
+      type:
+        type_1: "E-BOOKS"
+        type_2: "TEXT BOOKS"
+        type_3: "OFFER ZONE"
+      shop: "SHOP NOW"
+    quote: "Tôi có thể nói rằng không nghi ngờ gì nữa rằng nhóm của bạn
+      là một niềm vui thật sự để làm việc với. Họ dễ dàng liên lạc với
+      nhau mà làm cho quá trình trơn tru. Rat khuyen khich."
+    slogan: "Join 100,321 Happy readers And Get Access To Our Entire Collection
+      Of 1000 ebooks For The Price Of One"
+  common:
+    sure: "Bạn có chắc không?"
+    update: "Cập nhật"
+    need_current_pass: "chúng tôi cần mật khẩu hiện tại của bạn
+      để xác nhận thay đổi của bạn"
+    char_min: "tối thiểu ký tự"
+    edit: "Chỉnh sửa"
+    wait_infor: "Hiện đang chờ xác nhận"
+    confirm_account: "Xác nhận tài khoản"
+    hello: "Xin chào"
+    unhappy: "Không hạnh phúc"
+    back: "Quay trở về"
+    book: "Sách"
+    search: "Tìm kiếm"
+    or: "Hoặc"
+  app:
+    app_name: "Book Review"
+    setting: "Thiết lập"
+    profile_page: "Trang cá nhân"
+    signup: "Đăng kí"
+    login: "Đăng nhập"
+    logout: "Đăng xuất"
+    already_have_account: "Đã có tài khoản đăng nhập"
+    toggle_navi: "Chuyển đổi điều hướng"
+    alert: "123"
+    resend_confirm: "Gửi lại hướng dẫn xác nhận"
+    welcome: "Chào mừng"
+    click_link_confirm: "Bạn có thể xác nhận email tài khoản
+      của mình thông qua liên kết dưới đây:"
+    change_pass: "Thay đổi mật khẩu của bạn"
+    forgot_pass: "Quên mật khẩu?"
+    reset_pass_instruction: "Gửi cho tôi hướng dẫn đặt lại mật khẩu"
+    new_pass: "Mật khẩu mới"
+    confirm_new_pass: "Xác nhận mật khẩu mới"
+    cancel_account: "Bỏ tài khoản của tôi"
+    login_with: "Đăng nhập với"
+  unlock:
+    unlock_1: "Gửi lại hướng dẫn mở khóa"
+    unlock_2: "Tài khoản của bạn đã bị khoá do số lượng quá nhiều
+       của những nỗ lực đăng nhập không thành công."
+    unlock_3: "Nhấp vào liên kết bên dưới để mở khóa tài khoản của bạn:"
+    unlock_4: "Mở khóa tài khoản của tôi"
+  confirm:
+    confirm_1: "Không nhận được hướng dẫn xác nhận?"
+    confirm_2: "Không nhận được hướng dẫn mở khóa?"
+  reset:
+    reset_1: "Ai đó đã yêu cầu liên kết thay đổi mật khẩu của bạn.
+       Bạn có thể thực hiện điều này thông qua liên kết bên dưới."
+    reset_2: "Thay đổi mật khẩu của tôi"
+    reset_3: "Nếu bạn không yêu cầu điều này, vui lòng bỏ qua email này."
+    reset_4: "Mật khẩu của bạn sẽ không thay đổi cho đến khi bạn
+       truy cập liên kết ở trên và tạo một liên kết mới."
+  change:
+    change_1: "Chúng tôi đang liên hệ với bạn để thông báo cho
+      bạn biết rằng email của bạn đang được thay đổi thành"
+    change_2: "Chúng tôi đang liên hệ với bạn để thông báo cho bạn
+      rằng email của bạn đã được thay đổi để"
+    change_3: "Chúng tôi đang liên hệ với bạn để thông báo cho bạn
+      rằng mật khẩu của bạn đã được thay đổi."
+    change_4: "để trống nếu
+       bạn không muốn thay đổi nó"
+  books:
+    sort_by: "Sắp xếp theo "
+    showing: "Hiển thị "
+    result: "kết quả"
+    of: " trong "
+    zero: "0 - 0 trong 0 kết quả"
+    one: "1 - 1 trong 1 kết quả"
+    publish_date: "Ngày xuất bản"
+    title: "Tiêu đề"
+    nothing: "Không có kết quả"
+    search: "Tìm"
+    clear: "Xóa"
+    title2: "Tiêu đề:"
+    author2: "Tác giả:"
+    from: "Từ:"
+    to: "Đến:"
+    not_found: "Sách không tồn tại"
+    review: "Đánh giá"
+    no_review: "Hiện tại chưa có đánh giá nào"
+    be_first: "hãy là người đầu tiên đánh giá cuốn \"%{book}\""
+    rate: "Chấm điểm"
+    date_format_1: "%d/%m/%Y"
+    date_format_2: "%d/%m/%Y %H:%M"
+    book_mark: "Đánh dấu"
+    unbook_mark: "Bỏ đánh dấu"
+    review: "Bình luận"
+    fav: "Yêu thích"
+    unfav: "Bỏ thích"
+    author: "Tác giả"
+    bookmark_error: "Không thể đánh dấu"
+    unbookmark_error: "Không thể bỏ đánh dấu"
+    favorite_error: "Không thể thích hoặc bỏ thích"
+    write_review: "Cảm nhận của bạn về cuốn sách này"
+  review:
+    success: "Bình luận của bạn đã được lưu lại"
+    fail: "Có lỗi xảy ra. Bình luận của bạn không được lưu lại"
+    content: "Bình luận của bạn"
+    update_success: "Bình luận của bạn đã được sửa"
+    update_fail: "Có lỗi xảy ra. Bình luận của bạn chưa được sửa"
+    delete_success: "Bình luận của bạn đã được xóa"
+    delete_fail: "Có lỗi xảy ra. Bình luận của bạn chưa được xóa"
+    not_found: "Bình luận không tồn tại"
+  button:
+    submit: "Hoàn thành"
+    clear: "Xóa"
+    cancel: "Hủy"
+  bookmark:
+    not_found: "Đánh dấu không tồn tại"
+    bookmark_error: "Không thể bookmark"
+    unbookmark_error: "Không thể bỏ bookmark"
+    favorite_error: "Không thể favorite hoặc unfavorite"
+    status:
+      change: "Thay đổi"
+      value_1: "not read"
+      value_2: "reading"
+      value_3: "finish"
