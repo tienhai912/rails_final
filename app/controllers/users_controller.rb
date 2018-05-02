@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   attr_reader :user
 
   def show
-    @books = user.books
   end
 
   private
