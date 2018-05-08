@@ -6,8 +6,10 @@ Rails.application.routes.draw do
         as: :destroy_user_session
   end
 
-  devise_for :users, skip: :omniauth_callbacks
-  # resources :users, only: %i(show)
+  devise_for :users, only: :registrations,
+    controllers: {registrations: "users/registrations"}
+  devise_for :users, skip: [:omniauth_callbacks, :registrations]
+  resources :users, only: %i(show)
   root "static_pages#home"
 
 end
