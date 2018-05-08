@@ -233,3 +233,11 @@
 #   end
 # end
 # >>>>>>> 5ea60a8d2b88818e650e1951bed6a860bf13853c
+
+10.times do |n|
+  name = Faker::Name.name
+  email = "user#{n+1}@123.com"
+  password = "123123"
+  User.create! name: name, email: email, password: password,
+    password_confirmation: password, admin: false
+end

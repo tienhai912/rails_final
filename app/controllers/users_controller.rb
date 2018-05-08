@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :find_user, only: %i(show)
+  # before_action :authenticate_user!
 
   attr_reader :user
 
