@@ -241,3 +241,31 @@
   User.create! name: name, email: email, password: password,
     password_confirmation: password, admin: false
 end
+
+2.times do |n|
+  name = "Laptop #{n}"
+  description = "This is #{name}"
+  quantity = 1
+  price = 1.2
+  image = "aa"
+  product_ISBN = "ISBN#{n}"
+  code = "code#{n}"
+  Product.create! name: name, description: description,
+    quantity: quantity, price: price, image: image,
+    ISBN: product_ISBN, code: code
+end
+
+2.times do |n|
+  percent = 1.1
+  description = "Promotion #{n}"
+  start_date = Date.new
+  end_date = Date.new
+  Promotion.create! percent: percent, description: description,
+    start_date: start_date, end_date: end_date
+end
+
+2.times do |n|
+  2.times do |m|
+    ProductPromotion.create! product_id: n+1, promotion_id: m+1
+  end
+end

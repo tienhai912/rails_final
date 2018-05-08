@@ -5,7 +5,6 @@ Rails.application.routes.draw do
       delete "sign_out", to: "devise/sessions#destroy",
         as: :destroy_user_session
   end
-
   devise_for :users, only: :registrations,
     controllers: {registrations: "users/registrations"}
   devise_for :users, skip: [:omniauth_callbacks, :registrations]

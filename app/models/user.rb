@@ -5,6 +5,8 @@ class User < ApplicationRecord
     :recoverable, :rememberable, :trackable, :validatable,
     :omniauthable, omniauth_providers: %i(facebook google_oauth2).freeze
 
+  
+
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
 
