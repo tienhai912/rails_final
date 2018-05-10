@@ -1,0 +1,11 @@
+<div class="container">
+  <div id="product-index-sidebar" class="sidebar col-xs-12 col-md-3">
+    <%= render "index_search", products_support: @products_support,
+      result: @products_support.products_search %>
+  </div>
+  <div id="product-index-info" class="col-xs-12 col-md-9">
+    <div class="row">
+      <%= render "index_content", products_support: @products_support%>
+    </div>
+  </div>
+</div>

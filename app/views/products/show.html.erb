@@ -1,0 +1,25 @@
+<div>
+  <% if @product.image %>
+    <%= link_to product_path @product.id do %>
+      <%= image_tag @product.image, class: "book-index-cover" %>
+    <% end %>
+  <% end %>
+  <div class="col-xs-3">
+    <p><%= t "products.name" %>: <%= @product.name %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><%= t "products.code" %>: <%= @product.code %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><%= t "products.ISBN" %>: <%= @product.ISBN %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><%= t "products.quantity" %>: <%= @product.quantity %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><%= t "products.price" %>: <%= @product.price %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><%= t "products.description" %>: <%= @product.description %></p>
+  </div>
+</div>

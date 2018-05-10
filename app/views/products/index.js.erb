@@ -1,0 +1,7 @@
+$('#product-index-info').html('<%= j render "index_content",
+  products_support: @products_support %>');
+$('#product-index-sidebar').html('<%= j render "index_search", products_support: @products_support,
+  result: @products_support.products_search %>');
+$('.index-dropdown').html('<%= j render "dropdown", products_support: @products_support %>');
+$('#pagination').html('<%= j paginate(@products_support.products_search,
+  remote: true).to_s %>');

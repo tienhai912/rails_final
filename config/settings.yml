@@ -1,3 +1,5 @@
-user:
+users:
   name_max_length: 50
   email_max_length: 255
+products:
+  show_limit: 6

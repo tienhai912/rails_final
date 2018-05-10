@@ -1,0 +1,6 @@
+<span class="dropdown" id="index-dropdown">
+  <%= sort_link products_support.search, :name,
+    t("products.name"), {}, {remote: true, method: :get} %>|
+  <%= sort_link products_support.search, :price, t("products.price"), {},
+    {remote: true, method: :get} %>
+</span>

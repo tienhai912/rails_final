@@ -1,0 +1,38 @@
+<div class="book-detail">
+  <div class="book-cover-box col-xs-12 col-sm-4">
+    <div class="book-cover">
+      <% if product.image %>
+        <%= link_to product_path(product.id) do %>
+          <%= image_tag product.image, class: "book-index-cover" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="book-info col-xs-12 col-sm-6">
+    <div class="book-des">
+      <p class="book-index-title">
+        <%= product.name %>
+      </p>
+      <div class="item book-index-author">
+        <p class="title"><%= t "products.code" %>:</p>
+        <%= product.code %>
+      </div>
+      <div class="item book-index-author">
+        <p class="title"><%= t "products.isbn" %>:</p>
+        <%= product.ISBN %>
+      </div>
+      <div class="item book-index-author">
+        <p class="title"><%= t "products.price" %>:</p>
+        <%= product.price %>
+      </div>
+      <div class="item book-index-author">
+        <p class="title"><%= t "products.quantity" %>:</p>
+        <%= product.quantity %>
+      </div>
+      <div class="item book-index-author">
+        <p class="title"><%= t "products.description" %>:</p>
+        <%= product.description %>
+      </div>
+    </div>
+  </div>
+</div>

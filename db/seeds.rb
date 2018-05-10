@@ -247,7 +247,7 @@ end
   description = "This is #{name}"
   quantity = 1
   price = 1.2
-  image = "aa"
+  image = "https://pbs.twimg.com/profile_images/625769159339737088/2dwpQAXA_400x400.jpg"
   product_ISBN = "ISBN#{n+1}"
   code = "code#{n+1}"
   Product.create! name: name, description: description,

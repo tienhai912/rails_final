@@ -1,0 +1,53 @@
+<div class="text-left" id="book-search">
+  <div>
+    <%= t "products.sort_by" %>:
+    <span class="index-dropdown">
+      <%= render "dropdown", products_support: products_support %>
+    </span>
+  </div>
+  <br>
+  <div>
+    <%= t "products.showing" %>
+    <% if result.count == 0 %>
+      <%= t("products.zero") %>
+    <% elsif result.count == 1 %>
+      <%= t("products.one") %>
+    <% else %>
+      <%= result.offset_value + 1 %> - <%= result.offset_value + result.length %>
+      <%= t "products.of" %>
+      <%= result.count %> <%= t("products.result") %>
+    <% end %>
+  </div>
+  <br>
+  <%= search_form_for products_support.search, url: products_path,
+    remote: true, method: :get do |f| %>
+    <p>
+      <%= f.label t("products.name") %>
+      <%= f.text_field :name_cont, id: "index-name",
+        class: "pj-form-field f-text" %>
+    </p>
+    <p>
+      <%= f.label t("products.code") %>
+      <%= f.text_field :code_cont, id: "index-code",
+        class: "pj-form-field f-text" %>
+    </p>
+    <p>
+      <%= f.label t("products.ISBN") %>
+      <%= f.text_field :ISBN_cont, id: "index-isbn",
+        class: "pj-form-field f-text" %>
+    </p>
+    <p>
+      <%= f.label t("products.price") %>
+      <%= f.number_field :price_cont, id: "index-price",
+        class: "pj-form-field f-text" %>
+    </p>
+    <br>
+    <p>
+      <label class="title">&nbsp;</label>
+      <%= f.submit  t("products.search"),
+        class: "btn btn-primary btn-search-book-index" %>
+      <%= link_to t("products.clear"), {remote: true},
+        class: "btn btn-default btn-search-book-index", id: "index-clear" %>
+    </p>
+  <% end %>
+</div>

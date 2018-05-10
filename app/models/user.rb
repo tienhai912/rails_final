@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable,
     :omniauthable, omniauth_providers: %i(facebook google_oauth2).freeze
@@ -11,10 +11,10 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   validates :name, presence: true,
-    length: {maximum: Settings.user.name_max_length}
+    length: {maximum: Settings.users.name_max_length}
   validates :email, presence: true,
-    length: {maximum: Settings.user.email_max_length},
-    format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
+    length: {maximum: Settings.users.email_max_length},
+    format: {with: VALID_EMAIL_REGEX}
 
   class << self
     def from_omniauth auth
