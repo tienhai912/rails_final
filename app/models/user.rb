@@ -5,10 +5,16 @@ class User < ApplicationRecord
     :recoverable, :rememberable, :trackable, :validatable,
     :omniauthable, omniauth_providers: %i(facebook google_oauth2).freeze
 
-  
+  has_many :orders, dependent: :destroy
+  has_many :reviews, dependent: :destroy
+  has_many :blogs, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
-  validates :name, presence: true
-  validates :email, presence: true, uniqueness: true
+  validates :name, presence: true,
+    length: {maximum: Settings.user.name_max_length}
+  validates :email, presence: true,
+    length: {maximum: Settings.user.email_max_length},
+    format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
 
   class << self
     def from_omniauth auth

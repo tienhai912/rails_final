@@ -242,14 +242,14 @@
     password_confirmation: password, admin: false
 end
 
-2.times do |n|
-  name = "Laptop #{n}"
+10.times do |n|
+  name = "Laptop #{n+1}"
   description = "This is #{name}"
   quantity = 1
   price = 1.2
   image = "aa"
-  product_ISBN = "ISBN#{n}"
-  code = "code#{n}"
+  product_ISBN = "ISBN#{n+1}"
+  code = "code#{n+1}"
   Product.create! name: name, description: description,
     quantity: quantity, price: price, image: image,
     ISBN: product_ISBN, code: code
@@ -257,9 +257,9 @@ end
 
 2.times do |n|
   percent = 1.1
-  description = "Promotion #{n}"
-  start_date = Date.new
-  end_date = Date.new
+  description = "Promotion #{n+1}"
+  start_date = 2.days.ago.to_datetime
+  end_date = 3.days.from_now.to_datetime
   Promotion.create! percent: percent, description: description,
     start_date: start_date, end_date: end_date
 end
@@ -268,4 +268,40 @@ end
   2.times do |m|
     ProductPromotion.create! product_id: n+1, promotion_id: m+1
   end
+end
+
+5.times do |n|
+  5.times do |m|
+    content = "User #{n+1} review laptop #{m+6}"
+    rating = 5
+    Review.create! product_id: n+1, user_id: m+6, content: content, rating: rating
+  end
+end
+
+20.times do |n|
+  user_id = n / 2 +1
+  content = "Blog #{n}"
+  Blog.create! user_id: user_id, content: content
+end
+
+60.times do |n|
+  blog_id = n / 4 + 1
+  user_id = n / 7 + 1
+  content = "Comment #{n+1}"
+  Comment.create! user_id: user_id, blog_id: blog_id, content: content
+end
+
+60.times do |n|
+  user_id = rand(1..10)
+  price = 13.2
+  Order.create! user_id: user_id, price: price
+end
+
+180.times do |n|
+  order_id = n / 3 + 1
+  product_id = rand(1..10)
+  quantity = rand(1..3)
+  total = 2.3
+  OrderItem.create! order_id: order_id, product_id: product_id,
+    quantity: quantity, total: total
 end
