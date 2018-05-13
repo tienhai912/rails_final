@@ -33,6 +33,7 @@ en:
     search: "Search"
     or: "or"
     update_profile: "Update profile"
+    please_sign_in: "Please sign in"
   app:
     app_name: "Laptop Shopping"
     setting: "Setting"

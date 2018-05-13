@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   devise_for :users, skip: %i(omniauth_callbacks registrations)
   resources :users, only: %i(show)
   resources :products, only: %i(index show)
+  resources :orders, only: %i(index show)
   root "static_pages#home"
 
 end
