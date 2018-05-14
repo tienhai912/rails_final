@@ -86,6 +86,7 @@ gem "omniauth-facebook"
 gem "figaro"
 gem "simplecov-rcov"
 gem "ckeditor"
+gem "rails_admin", "~> 1.3"
 
 group :development, :test do
   gem "byebug", platform: :mri

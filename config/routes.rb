@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, only: :omniauth_callbacks,
     controllers: {omniauth_callbacks: "users/omniauth_callbacks"} do
       delete "sign_out", to: "devise/sessions#destroy",
