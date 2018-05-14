@@ -9,8 +9,7 @@ class ApplicationController < ActionController::Base
   private
   def signed_in_user
     return if user_signed_in?
-    store_location
-    flash[:danger] = t "please_sign_in"
+    flash[:danger] = t "common.please_sign_in"
     redirect_to new_user_session_path
   end
 end

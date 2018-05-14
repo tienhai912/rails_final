@@ -149,3 +149,12 @@ en:
     search: "Search"
     clear: "Clear"
     sort_by: "Sort by"
+  orders:
+    detail: "Detail"
+    total: "Total"
+    your_orders: "Your Orders"
+  order_items:
+    product: "product"
+    quantity: "Quantity"
+    price: "Price"
+    total: "Total"

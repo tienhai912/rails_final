@@ -1,2 +1,4 @@
 <p>List of orders</p>
-<%=@order
+<% @orders.each do |order| %>
+  <%= render "order_index", order: order%>
+<% end %>

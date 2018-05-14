@@ -1,0 +1,11 @@
+<% @order.order_items.each do |item| %>
+  <div>
+    <%= t "order_items.product" %>: <%= link_to item.product.name, product_path(item.product) %>
+  </div>
+  <div>
+    <%= t "order_items.quantity" %>: <%= item.quantity %>
+  </div>
+  <div>
+    <%= t "order_items.total" %>: <%= item.total %>
+  </div>
+<% end %>

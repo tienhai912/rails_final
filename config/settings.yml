@@ -3,3 +3,5 @@ users:
   email_max_length: 255
 products:
   show_limit: 6
+orders:
+  show_limit: 10
