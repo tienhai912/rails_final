@@ -159,3 +159,7 @@ en:
     quantity: "Quantity"
     price: "Price"
     total: "Total"
+    add_to_cart: "Add to cart"
+    delete: "Delete"
+    update: "Update"
+    confirm_delete: "Are you sure you wish to delete the product '#{name}' from your cart?"

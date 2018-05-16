@@ -2,5 +2,16 @@ class Order < ApplicationRecord
   has_many :order_items, dependent: :destroy
   belongs_to :user
 
-  validates :price, presence: true
+  validates :active, inclusion: {in: [false, true]}
+
+  before_save :update_price
+
+  def subtotal
+    order_items.collect { |item| item.valid? ? (item.quantity * item.unit_price) : 0 }.sum
+  end
+
+  private
+  def update_price
+    self.price = subtotal
+  end
 end

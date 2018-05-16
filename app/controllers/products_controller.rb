@@ -6,7 +6,9 @@ class ProductsController < ApplicationController
 
   def index; end
 
-  def show; end
+  def show
+    @order_item = current_order.order_items.new
+  end
 
   private
   def find_product

@@ -288,7 +288,8 @@ end
 60.times do |n|
   user_id = rand(1..10)
   price = 13.2
-  Order.create! user_id: user_id, price: price
+  active = false
+  Order.create! user_id: user_id, price: price, active: active
 end
 
 180.times do |n|

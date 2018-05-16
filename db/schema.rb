@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20180508074942) do
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
     t.float "price"
+    t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
