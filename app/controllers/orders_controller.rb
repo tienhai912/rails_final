@@ -11,9 +11,10 @@ class OrdersController < ApplicationController
   end
 
   def create
-    byebug
-    current_order.save
-    session.delete(:order_id)
+    current_order.save!
+    session.delete :order_id
+    flash[:success] = t "common.thank_buy"
+    redirect_to root_path
   end
 
   private

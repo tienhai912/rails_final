@@ -7,7 +7,7 @@
     <%= render 'carts/cart_row', product: order_item.product,
       order_item: order_item, show_total: true %>
   <% end %>
+  <div><%= current_order.price %></div>
+  <div><%= link_to t("orders.check_out"), orders_path,
+    method: :create, class: "btn btn-primary" %></div>
 <% end %>
-<div><%= current_order.price %></div>
-<div><%= link_to t("orders.check_out"), orders_path,
-  method: :create, class: "btn btn-primary" %></div>
