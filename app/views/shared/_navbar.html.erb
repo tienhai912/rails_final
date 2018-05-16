@@ -22,7 +22,9 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-          <%= render "shared/cart_text" %>
+          <span class="cart-text">
+            <%= render "shared/cart_text" %>
+          </span>
           <li class="dropdown">
             <%= link_to "#", class: "dropdown-toggle",
               data: {toggle: "dropdown"} do %>

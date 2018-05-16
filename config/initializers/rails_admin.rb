@@ -10,7 +10,6 @@ RailsAdmin.config do |config|
 
   config.authorize_with do
     unless current_user.admin
-      byebug
       flash[:danger] = t "common.be_admin"
       redirect_to main_app.root_path
     end

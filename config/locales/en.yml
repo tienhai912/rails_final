@@ -163,3 +163,4 @@ en:
     delete: "Delete"
     update: "Update"
     confirm_delete: "Are you sure you wish to delete the product '#{name}' from your cart?"
+    go_back: "There are no item in your shopping cart.  Please go back and add some items to your cart."

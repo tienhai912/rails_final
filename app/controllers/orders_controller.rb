@@ -10,6 +10,12 @@ class OrdersController < ApplicationController
   def show
   end
 
+  def create
+    byebug
+    current_order.save
+    session.delete(:order_id)
+  end
+
   private
 
   def find_order

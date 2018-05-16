@@ -1,5 +1,5 @@
-<% if @order.errors.any? || @order_item.errors.any? %>
+<% unless @order.errors.blank? && @order_items.errors.blank? %>
   alert("not valid.")
 <% else %>
-  $(".cart-text").html("<%= escape_javascript(render 'layouts/cart_text') %>")
+  $(".cart-text").html("<%= escape_javascript(render 'shared/cart_text') %>")
 <% end %>

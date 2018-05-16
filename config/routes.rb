@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   devise_for :users, skip: %i(omniauth_callbacks registrations)
   resources :users, only: %i(show)
   resources :products, only: %i(index show)
-  resources :orders, only: %i(index show)
+  resources :orders, only: %i(index show create)
   resource :cart, only: %i(show)
   resources :order_items, only: %i(create update destroy)
   root "static_pages#home"
