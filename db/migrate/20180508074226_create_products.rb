@@ -4,10 +4,10 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :description
       t.integer :quantity
-      t.float :price
+      t.decimal :price
       t.string :image
       t.string :code
-      t.float :screen_size
+      t.string :screen_size
       t.string :resolution
       t.string :CPU
       t.integer :RAM

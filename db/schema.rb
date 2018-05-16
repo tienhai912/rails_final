@@ -16,14 +16,14 @@ ActiveRecord::Schema.define(version: 20180508074942) do
     t.integer "order_id"
     t.integer "product_id"
     t.integer "quantity"
-    t.float "total"
+    t.decimal "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
-    t.float "price"
+    t.decimal "price"
     t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -40,10 +40,10 @@ ActiveRecord::Schema.define(version: 20180508074942) do
     t.string "name"
     t.string "description"
     t.integer "quantity"
-    t.float "price"
+    t.decimal "price"
     t.string "image"
     t.string "code"
-    t.float "screen_size"
+    t.string "screen_size"
     t.string "resolution"
     t.string "CPU"
     t.integer "RAM"
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20180508074942) do
 
   create_table "promotions", force: :cascade do |t|
     t.string "name"
-    t.float "percent"
+    t.decimal "percent"
     t.string "description"
     t.datetime "start_date"
     t.datetime "end_date"

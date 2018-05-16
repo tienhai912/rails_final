@@ -4,7 +4,6 @@ class OrderItemsController < ApplicationController
   def create
     @order = current_order
     valid_order
-    @order.save
     @order_items = @order.order_items.find_by(product_id: order_item_params[:product_id])
     if @order_items.blank?
       @order_items = @order.order_items.new(order_item_params)
@@ -13,6 +12,7 @@ class OrderItemsController < ApplicationController
       params[:order_item][:quantity] = (order_item_params[:quantity].to_i + @order_items.quantity).to_s
       @order_items.update_attributes(order_item_params)
     end
+    @order.save
     session[:order_id] = @order.id
   end
 

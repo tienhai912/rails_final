@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   end
   devise_for :users, only: :registrations,
     controllers: {registrations: "users/registrations"}
-  devise_for :users, skip: %i(omniauth_callbacks registrations)
+  devise_for :users, only: :sessions,
+    controllers: {sessions: "users/sessions"}
+  devise_for :users, skip: %i(omniauth_callbacks registrations sessions)
   resources :users, only: %i(show)
   resources :products, only: %i(index show)
   resources :orders, only: %i(index show create)
