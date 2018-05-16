@@ -8,6 +8,12 @@ class ProductsController < ApplicationController
 
   def show
     @order_item = current_order.order_items.new
+    if user_signed_in?
+      @review = @product.reviews.find_by user_id: current_user.id
+      if @review.blank?
+        @review = Review.new
+      end
+    end
   end
 
   private

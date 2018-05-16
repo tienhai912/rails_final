@@ -1,0 +1,8 @@
+<% product.reviews.page(params[:page])
+    .per_page(Settings.reviews.show_limit).each do |review| %>
+  <%= render "reviews/review_detail", review: review %>
+<% end %>
+<div id="review-pagination">
+  <%= paginate product.reviews.page(params[:page])
+    .per_page(Settings.reviews.show_limit), remote: true %>
+</div>

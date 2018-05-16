@@ -1,0 +1,3 @@
+$('#review-pagination').html('<%= j paginate(@product.reviews.page(params[:page])
+    .per_page(Settings.reviews.show_limit), remote: true).to_s %>');
+$('#product-review-list').html('<%= j render "reviews/review_list", product: @product %>');

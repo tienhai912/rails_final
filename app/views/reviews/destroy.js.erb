@@ -1,0 +1,1 @@
+$(".product-review").html("<%= escape_javascript(render 'reviews/review_session', review: Review.new, product: @product) %>")

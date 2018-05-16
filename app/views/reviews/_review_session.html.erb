@@ -1,0 +1,21 @@
+<% if user_signed_in? %>
+  <%= form_for review, remote: true do |f| %>
+    <%= f.label :rating %>
+    <%= f.number_field :rating, class: "form-control" %>
+
+    <%= f.label :content %>
+    <%= f.text_field :content, class: "form-control" %>
+
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :product_id, value: product.id %>
+
+    <%= f.submit t("button.submit"), class: "btn btn-primary" %>
+    <% unless review.new_record? %>
+      <%= link_to t("button.delete"), review_path(review, review: product.id), method: :delete,
+        remote: true, class: "btn btn-danger" %>
+    <% end %>
+  <% end %>
+<% end %>
+<div id="product-review-list">
+  <%= render "reviews/review_list", product: product %>
+</div>

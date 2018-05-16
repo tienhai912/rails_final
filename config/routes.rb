@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :orders, only: %i(index show create)
   resource :cart, only: %i(show)
   resources :order_items, only: %i(create update destroy)
+  resources :reviews, only: %i(create update destroy)
   root "static_pages#home"
 
 end

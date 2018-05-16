@@ -5,3 +5,5 @@ products:
   show_limit: 6
 orders:
   show_limit: 10
+reviews:
+  show_limit: 2

@@ -128,6 +128,7 @@ en:
     submit: "Submit"
     clear: "Clear"
     cancel: "Cancel"
+    delete: "Delete"
   # bookmark:
   #   not_found: "Bookmark not found"
   #   status:
@@ -165,3 +166,11 @@ en:
     update: "Update"
     confirm_delete: "Are you sure you wish to delete the product '#{name}' from your cart?"
     go_back: "There are no item in your shopping cart.  Please go back and add some items to your cart."
+  reviews:
+    not_found: "Review is not found"
+    create_fail: "Failed to create review"
+    create_success: "Successfully create review"
+    update_fail: "Failed to update review"
+    update_success: "Successfully update review"
+    delete_fail: "Failed to delete review"
+    delete_success: "Successfully delete review"
