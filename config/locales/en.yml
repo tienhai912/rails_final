@@ -34,6 +34,7 @@ en:
     or: "or"
     update_profile: "Update profile"
     please_sign_in: "Please sign in"
+    be_admin: "You need to be admin to access this!"
   app:
     app_name: "Laptop World"
     setting: "Setting"

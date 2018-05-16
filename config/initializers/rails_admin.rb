@@ -8,6 +8,14 @@ RailsAdmin.config do |config|
   end
   config.current_user_method(&:current_user)
 
+  config.authorize_with do
+    unless current_user.admin
+      byebug
+      flash[:danger] = t "common.be_admin"
+      redirect_to main_app.root_path
+    end
+  end
+
   ## == Cancan ==
   # config.authorize_with :cancan
 
@@ -26,37 +34,46 @@ RailsAdmin.config do |config|
   config.main_app_name = ["Laptop World", "Admin page"]
 
   config.model "Product" do
-    exclude_fields :order_items, :orders
+    exclude_fields :order_items, :orders, :promotions, :product_promotions
+    # field :image, :refile do
+    #   pretty_value do
+    #     if (bindings[:object].image)
+    #       bindings[:view].image_tag bindings[:view].attachment_url(bindings[:object], :image, :fill, 100, 100)
+    #     end
+    #   end
+    # end
+  end
+
+  config.model "Promotion" do
+    exclude_fields :product_promotions
   end
 
   config.model "Order" do
-    list do
-      exclude_fields :order_items
-    end
+    exclude_fields :order_items
   end
 
   config.actions do
     dashboard                     # mandatory
     index do
-      only ["User", "Product", "Order", "Review"]
+      only ["User", "Product", "Order", "Review", "Promotion"]
     end                         # mandatory
 
     new do
-      only ["User", "Product"]
+      only ["Product", "Promotion"]
     end
     # export
     bulk_delete do
-      only ["User", "Product", "Order", "Review"]
+      only ["User", "Product", "Order", "Review", "Promotion"]
     end
     show
     edit do
-      only ["Product"]
+      only ["Product", "Promotion"]
     end
     delete do
-      only ["User", "Product", "Order", "Review"]
+      only ["User", "Product", "Order", "Review", "Promotion"]
     end
     show_in_app do
-      only ["Product", "Review"]
+      only ["Product", "Review", "Promotion"]
     end
 
     ## With an audit adapter, you can add:

@@ -7,8 +7,6 @@ class User < ApplicationRecord
 
   has_many :orders, dependent: :destroy
   has_many :reviews, dependent: :destroy
-  has_many :blogs, dependent: :destroy
-  has_many :comments, dependent: :destroy
 
   validates :name, presence: true,
     length: {maximum: Settings.users.name_max_length}

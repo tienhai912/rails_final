@@ -242,25 +242,32 @@
     password_confirmation: password, admin: false
 end
 
+2.times do |n|
+  name = Faker::Name.name
+  email = "admin#{n+1}@123.com"
+  password = "123123"
+  User.create! name: name, email: email, password: password,
+    password_confirmation: password, admin: true
+end
+
 10.times do |n|
   name = "Laptop #{n+1}"
   description = "This is #{name}"
   quantity = 1
   price = 1.2
   image = "https://pbs.twimg.com/profile_images/625769159339737088/2dwpQAXA_400x400.jpg"
-  product_ISBN = "ISBN#{n+1}"
   code = "code#{n+1}"
   Product.create! name: name, description: description,
-    quantity: quantity, price: price, image: image,
-    ISBN: product_ISBN, code: code
+    quantity: quantity, price: price, image: image, code: code
 end
 
 2.times do |n|
+  name = "Promotion #{n+1}"
   percent = 1.1
-  description = "Promotion #{n+1}"
+  description = "This is Promotion #{n+1}"
   start_date = 2.days.ago.to_datetime
   end_date = 3.days.from_now.to_datetime
-  Promotion.create! percent: percent, description: description,
+  Promotion.create! name: name, percent: percent, description: description,
     start_date: start_date, end_date: end_date
 end
 
@@ -276,19 +283,6 @@ end
     rating = 5
     Review.create! product_id: n+1, user_id: m+6, content: content, rating: rating
   end
-end
-
-20.times do |n|
-  user_id = n / 2 +1
-  content = "Blog #{n}"
-  Blog.create! user_id: user_id, content: content
-end
-
-60.times do |n|
-  blog_id = n / 4 + 1
-  user_id = n / 7 + 1
-  content = "Comment #{n+1}"
-  Comment.create! user_id: user_id, blog_id: blog_id, content: content
 end
 
 60.times do |n|

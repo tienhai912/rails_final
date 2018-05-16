@@ -10,36 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180514220318) do
-
-  create_table "active_admin_comments", force: :cascade do |t|
-    t.string "namespace"
-    t.text "body"
-    t.string "resource_type"
-    t.integer "resource_id"
-    t.string "author_type"
-    t.integer "author_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
-    t.index ["namespace"], name: "index_active_admin_comments_on_namespace"
-    t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
-  end
-
-  create_table "blogs", force: :cascade do |t|
-    t.integer "user_id"
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "comments", force: :cascade do |t|
-    t.integer "blog_id"
-    t.integer "user_id"
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20180508074942) do
 
   create_table "order_items", force: :cascade do |t|
     t.integer "order_id"
@@ -70,7 +41,6 @@ ActiveRecord::Schema.define(version: 20180514220318) do
     t.integer "quantity"
     t.float "price"
     t.string "image"
-    t.string "ISBN"
     t.string "code"
     t.float "screen_size"
     t.string "resolution"
@@ -83,6 +53,7 @@ ActiveRecord::Schema.define(version: 20180514220318) do
   end
 
   create_table "promotions", force: :cascade do |t|
+    t.string "name"
     t.float "percent"
     t.string "description"
     t.datetime "start_date"
