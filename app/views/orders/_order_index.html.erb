@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="column"><%= order.created_at %></div>
-  <div class="column"><%= order.price %></div>
-  <div class="column"><%= link_to t("orders.detail"), order_path(order) %></div>
+  <div class="col-xs-4"><%= order.created_at %></div>
+  <div class="col-xs-3"><%= order.price %></div>
+  <div class="col-xs-3"><%= link_to t("orders.detail"), order_path(order) %></div>
 </div>

@@ -1,11 +1,13 @@
-<% @order.order_items.each do |item| %>
-  <div>
-    <%= t "order_items.product" %>: <%= link_to item.product.name, product_path(item.product) %>
-  </div>
-  <div>
-    <%= t "order_items.quantity" %>: <%= item.quantity %>
-  </div>
-  <div>
-    <%= t "order_items.total" %>: <%= item.total %>
-  </div>
-<% end %>
+<div class="container order-page">
+	<% @order.order_items.each do |item| %>
+	<div class="col-xs-4">
+	<%= t "order_items.product" %>: <%= link_to item.product.name, product_path(item.product) %>
+	</div>
+	<div class="col-xs-3">
+	<%= t "order_items.quantity" %>: <%= item.quantity %>
+	</div>
+	<div class="col-xs-3">
+	<%= t "order_items.total" %>: <%= item.total %>
+	</div>
+	<% end %>
+</div>
