@@ -8,7 +8,7 @@ class Order < ApplicationRecord
   before_save :update_price
 
   def subtotal
-    order_items.collect { |item| item.valid? ? (item.quantity * item.product.price) : 0 }.sum
+    order_items.collect { |item| item.valid? ? (item.total) : 0 }.sum
   end
 
   private

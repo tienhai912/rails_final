@@ -1,0 +1,9 @@
+<div class="container">
+  <div id="promotion-index-info">
+    <% @promotions.each do |promotion| %>
+      <div class="row">
+        <%= render "index_detail", promotion: promotion%>
+      </div>
+    <% end %>
+  </div>
+</div>

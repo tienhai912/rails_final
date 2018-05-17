@@ -15,8 +15,11 @@ class Users::SessionsController < Devise::SessionsController
 
   # DELETE /resource/sign_out
   def destroy
-    super
+    if current_order.active == true
+      current_order.destroy
+    end
     session.delete :order_id
+    super
   end
 
   protected

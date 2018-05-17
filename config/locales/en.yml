@@ -174,3 +174,6 @@ en:
     update_success: "Successfully update review"
     delete_fail: "Failed to delete review"
     delete_success: "Successfully delete review"
+  promotions:
+    before_end_date: " must be before end date"
+    not_found: "Promotion is not found"

@@ -11,6 +11,7 @@ class OrdersController < ApplicationController
   end
 
   def create
+    current_order.active = false
     current_order.save!
     session.delete :order_id
     flash[:success] = t "common.thank_buy"

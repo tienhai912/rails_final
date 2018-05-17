@@ -9,5 +9,10 @@ class OrderItem < ApplicationRecord
   private
   def update_total
     self.total = self.product.price * self.quantity
+    return if self.product.promotions.blank?
+
+    self.product.promotions.each do |promo|
+      self.total = self.total * (1 - promo.percent/100)
+    end
   end
 end
